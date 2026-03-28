@@ -94,6 +94,8 @@ Review Agent + operator final approval → Railway production deploy.
 - **No corny UI**
 - **No mainstream/obvious movie picks**
 - **No code before mockup approval**
+- **No cards of any kind** — no swipe cards, no stacked cards, no card-based UI. Rejected by operator.
+- **No horror/movie theming on the UI** — the app is clean and premium, not a themed experience
 - **No generic fonts** — elite only
 - **No desktop-first** — MOBILE-FIRST always
 
