@@ -1,46 +1,42 @@
 "use client";
 
 import { useState } from "react";
-import Hero from "@/components/Hero";
-import FeaturedPick from "@/components/FeaturedPick";
-import CategoryRows from "@/components/CategoryRows";
-import FullCollection from "@/components/FullCollection";
-import Footer from "@/components/Footer";
-import MovieOverlay from "@/components/MovieOverlay";
-import BottomTabBar from "@/components/BottomTabBar";
+import HeroSection from "@/components/HeroSection";
+import BrowseRows from "@/components/BrowseRows";
+import TabBar from "@/components/TabBar";
+import DetailOverlay from "@/components/DetailOverlay";
 import { movies } from "@/lib/movies";
-import { Movie } from "@/lib/types";
 import { useBehavior } from "@/hooks/useBehavior";
+import { Movie } from "@/lib/types";
 
 export default function Home() {
   const { rankedMovies, save, skip, markSeen, recordExpand } = useBehavior(movies);
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
+  const [activeTab, setActiveTab] = useState<string>("home");
 
   return (
-    <main className="bg-black min-h-screen" style={{ paddingBottom: 84 }}>
-      <Hero />
-      <FeaturedPick />
-      <CategoryRows
+    <div style={{ background: "#000", minHeight: "100vh", paddingBottom: 80 }}>
+      <HeroSection onSelect={setSelectedMovie} />
+      <BrowseRows
         movies={movies}
-        onSave={save}
-        onExpand={recordExpand}
-        onPosterTap={setSelectedMovie}
+        onSelect={(movie) => {
+          setSelectedMovie(movie);
+          recordExpand(movie.title);
+        }}
       />
-      <FullCollection
-        rankedMovies={rankedMovies}
-        onSave={save}
-        onSkip={skip}
-        onMarkSeen={markSeen}
-        onExpand={recordExpand}
-      />
-      <Footer />
-      <MovieOverlay
-        movie={selectedMovie}
-        onClose={() => setSelectedMovie(null)}
-        onSave={save}
-        onWatched={markSeen}
-      />
-      <BottomTabBar />
-    </main>
+      <TabBar activeTab={activeTab} onTabChange={setActiveTab} />
+      {selectedMovie && (
+        <DetailOverlay
+          movie={selectedMovie}
+          onClose={() => setSelectedMovie(null)}
+          onSave={() => save(selectedMovie.title)}
+          onMarkSeen={() => markSeen(selectedMovie.title)}
+          isSaved={
+            rankedMovies.find((rm) => rm.movie.title === selectedMovie.title)
+              ?.isSaved || false
+          }
+        />
+      )}
+    </div>
   );
 }

@@ -1,35 +1,32 @@
 @import "tailwindcss";
 
 @theme {
-  --color-surface: #FFFFFF;
-  --color-surface-secondary: #F5F5F7;
-  --color-surface-elevated: #FFFFFF;
-  --color-text-primary: #1D1D1F;
-  --color-text-secondary: #6E6E73;
+  --color-surface: #000000;
+  --color-surface-elevated: #1C1C1E;
+  --color-surface-secondary: #2C2C2E;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #8E8E93;
   --color-accent: #0496FF;
-  --color-accent-hover: #3DB1FF;
-  --color-separator: #E5E5EA;
-  --color-overlay: rgba(0, 0, 0, 0.55);
+  --color-separator: #38383A;
 }
 
 :root {
-  --surface: #FFFFFF;
-  --surface-secondary: #F5F5F7;
-  --surface-elevated: #FFFFFF;
-  --text-primary: #1D1D1F;
-  --text-secondary: #6E6E73;
+  --surface: #000000;
+  --surface-elevated: #1C1C1E;
+  --surface-secondary: #2C2C2E;
+  --text-primary: #FFFFFF;
+  --text-secondary: #8E8E93;
   --accent: #0496FF;
-  --accent-hover: #3DB1FF;
-  --separator: #E5E5EA;
-  --overlay: rgba(0, 0, 0, 0.55);
+  --separator: #38383A;
 }
 
 body {
-  background-color: var(--surface);
-  color: var(--text-primary);
+  background-color: #000000;
+  color: #FFFFFF;
   font-family: var(--font-inter), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 * {
@@ -38,12 +35,10 @@ body {
   padding: 0;
 }
 
-/* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* Remove default button styling */
 button {
   background: none;
   border: none;
@@ -52,35 +47,11 @@ button {
   padding: 0;
 }
 
-/* Line clamp utility */
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* Hide scrollbar for clean editorial feel */
-::-webkit-scrollbar {
-  display: none;
-}
-
-body {
+/* Hide scrollbar on horizontal scroll containers */
+.hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
-/* Category row horizontal scroll */
-.category-scroll {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.category-scroll::-webkit-scrollbar {
+.hide-scrollbar::-webkit-scrollbar {
   display: none;
-}
-
-/* Smooth expand/collapse */
-.expand-transition {
-  transition: max-height 0.35s ease, opacity 0.25s ease;
 }

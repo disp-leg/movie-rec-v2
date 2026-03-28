@@ -5,32 +5,21 @@ import { getTitleColor } from "@/lib/poster";
 
 interface MoviePosterProps {
   title: string;
-  size?: "small" | "medium" | "large" | "hero";
-  className?: string;
+  width?: number;
+  height?: number;
   rounded?: number;
+  className?: string;
 }
-
-const SIZE_MAP = {
-  small: { width: 80, height: 120 },
-  medium: { width: 140, height: 210 },
-  large: { width: 280, height: 420 },
-  hero: { width: 0, height: 0 }, // full container
-};
 
 export default function MoviePoster({
   title,
-  size = "medium",
-  className = "",
+  width = 140,
+  height = 210,
   rounded = 8,
+  className = "",
 }: MoviePosterProps) {
   const posterUrl = getPosterUrl(title);
   const { from, to } = getTitleColor(title);
-  const dimensions = SIZE_MAP[size];
-
-  const sizeStyle =
-    size === "hero"
-      ? { width: "100%", height: "100%" }
-      : { width: dimensions.width, height: dimensions.height };
 
   if (posterUrl) {
     return (
@@ -40,7 +29,8 @@ export default function MoviePoster({
         loading="lazy"
         className={className}
         style={{
-          ...sizeStyle,
+          width,
+          height,
           objectFit: "cover",
           borderRadius: rounded,
           display: "block",
@@ -53,24 +43,25 @@ export default function MoviePoster({
     <div
       className={className}
       style={{
-        ...sizeStyle,
+        width,
+        height,
         borderRadius: rounded,
         background: `linear-gradient(145deg, ${from}, ${to})`,
         display: "flex",
-        alignItems: "flex-end",
-        justifyContent: "flex-start",
-        padding: size === "small" ? 8 : 14,
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 14,
         position: "relative",
         overflow: "hidden",
       }}
     >
       <span
         style={{
-          color: "rgba(0,0,0,0.5)",
-          fontSize: size === "small" ? 11 : size === "medium" ? 13 : 16,
+          color: "rgba(255,255,255,0.7)",
+          fontSize: 13,
           fontWeight: 600,
-          lineHeight: 1.2,
-          letterSpacing: "-0.01em",
+          lineHeight: 1.3,
+          textAlign: "center",
         }}
       >
         {title}
