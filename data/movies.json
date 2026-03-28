@@ -1,0 +1,476 @@
+[
+  {
+    "title": "Right at Your Door",
+    "year": 2006,
+    "director": "Chris Gorak",
+    "rating": 6.3,
+    "genres": ["Thriller", "Drama", "Survival"],
+    "categories": ["survival", "isolation", "bunker"],
+    "dna": ["isolation", "claustrophobia", "bleak", "societal-collapse", "psychological-horror"],
+    "description": "A dirty bomb goes off in LA and a husband seals himself inside his home with plastic sheeting and duct tape, shutting his wife out. The confined-space paranoia and the gut-punch twist ending share The Divide's unflinching bleakness about what people do to survive. The entire film takes place in and around one house, and the domestic setting makes the horror feel unbearably intimate -- much like The Divide's basement bunker. The ending reframes everything and leaves you hollowed out.",
+    "letterboxd": {
+      "top_positive": "One of the best post-9/11 anxiety films. The ending is devastating in a way that recontextualizes the entire movie.",
+      "top_negative": "Slow and repetitive. The husband is insufferable and the wife deserved better writing."
+    },
+    "whereToWatch": {
+      "svod": [],
+      "vod": ["Apple TV", "Amazon Video", "Fandango At Home"],
+      "free": ["Tubi", "Plex", "Roku Channel"]
+    },
+    "sources": [
+      "https://flickfilosopher.substack.com/p/lockdown-cinema-that-ironically-will",
+      "https://www.justwatch.com/us/movie/right-at-your-door",
+      "https://www.facebook.com/BooScream/posts/turning-to-film-to-see-what-a-nuclear-war-may-look-like-is-a-terrifying-ordeal-h/1172200174938183/"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "Aftermath",
+    "year": 2014,
+    "director": "Peter Engert",
+    "rating": 4.5,
+    "genres": ["Thriller", "Post-Apocalyptic", "Survival"],
+    "categories": ["survival", "bunker", "post-apocalyptic"],
+    "dna": ["isolation", "group-dynamics", "bleak", "societal-collapse", "power-dynamics"],
+    "description": "Nine strangers hole up in a rural Texas farmhouse after nuclear bombs devastate the country. Edward Furlong plays one of the survivors as radiation sickness, dwindling supplies, and outside threats push the group toward savagery. This is the closest spiritual sibling to The Divide -- same nuclear apocalypse setup, same confined-group-descending-into-madness arc, same nihilistic ending. Lower budget but it commits fully to the bleakness.",
+    "letterboxd": {
+      "top_positive": "Less a story of survival than a bare-bones morality drama on the different ways in which the end might be faced. Unflinching.",
+      "top_negative": "Bargain-bin Divide with none of the performances to back it up. Furlong sleepwalks through it."
+    },
+    "whereToWatch": {
+      "svod": [],
+      "vod": ["Amazon Video", "Apple TV", "Vudu"],
+      "free": ["Tubi", "Plex", "Hoopla"]
+    },
+    "sources": [
+      "https://projectedfigures.com/2016/06/18/remnants-2012/",
+      "https://en.wikipedia.org/wiki/Aftermath_(2014_film)",
+      "https://www.justwatch.com/us/movie/remnants"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "Hidden",
+    "year": 2015,
+    "director": "Matt Duffer, Ross Duffer",
+    "rating": 6.4,
+    "genres": ["Thriller", "Horror", "Post-Apocalyptic"],
+    "categories": ["survival", "bunker", "psychological"],
+    "dna": ["isolation", "claustrophobia", "group-dynamics", "bleak", "bunker"],
+    "description": "Before Stranger Things, the Duffer Brothers made this tight bunker thriller about a family of three surviving underground after an outbreak called 'the Breathers' devastated the surface. Alexander Skarsgard and Andrea Riseborough deliver restrained performances in an increasingly claustrophobic fallout shelter. The film methodically reveals its hand, and the final-act twist recontextualizes everything -- much like how The Divide slowly peels back layers of who these people really are. Genuinely underrated.",
+    "letterboxd": {
+      "top_positive": "A tightly written story with balanced, well-acted characters and a twist that actually earns its shock. The Duffer Brothers' best work.",
+      "top_negative": "Too slow for what it is. The twist is clever but doesn't fully land because the middle section drags."
+    },
+    "whereToWatch": {
+      "svod": [],
+      "vod": ["Amazon Video", "Apple TV", "Fandango At Home"],
+      "free": []
+    },
+    "sources": [
+      "https://www.reddit.com/r/horror/comments/1ndjo27/i_loved_the_divide_and_10_cloverfield_lane_any/",
+      "https://letterboxd.com/wraithape/list/underground-horror/",
+      "https://grahmsguide.com/hidden-movie-review/"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "The Day",
+    "year": 2011,
+    "director": "Douglas Aarniokoski",
+    "rating": 5.3,
+    "genres": ["Post-Apocalyptic", "Horror", "Action"],
+    "categories": ["survival", "post-apocalyptic", "group-dynamics"],
+    "dna": ["group-dynamics", "bleak", "societal-collapse", "power-dynamics", "survival"],
+    "description": "Five survivors in a post-apocalyptic wasteland barricade themselves in a farmhouse, only to discover they've stumbled into a trap set by cannibals. The desaturated, almost monochrome visual style mirrors The Divide's grimy aesthetic. Like The Divide, the real horror isn't the external threat but the fractures within the group -- trust disintegrates, alliances shift, and the veneer of cooperation cracks under the weight of survival. The home-invasion-in-reverse structure keeps the tension relentless.",
+    "letterboxd": {
+      "top_positive": "A taut post-apocalyptic horror with a clever twist on the home invasion formula. The washed-out look works perfectly.",
+      "top_negative": "Basic survivor group vs cannibals setup done competently but without any real depth or surprises."
+    },
+    "whereToWatch": {
+      "svod": ["Amazon Prime Video"],
+      "vod": ["Amazon Video"],
+      "free": ["Plex", "Fandango At Home Free", "Hoopla"]
+    },
+    "sources": [
+      "https://letterboxd.com/flickface/list/post-apocalyptic-movies/",
+      "https://nofspodcast.com/15-apocalyptic-horror-movies-to-watch-before-you-bite-the-dust",
+      "https://bloodandgutsforgrownups.wordpress.com/2014/06/12/rewind-review-2011s-the-day/"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "Await Further Instructions",
+    "year": 2018,
+    "director": "Johnny Kevorkian",
+    "rating": 4.9,
+    "genres": ["Sci-Fi", "Horror", "Thriller"],
+    "categories": ["isolation", "psychological", "bunker"],
+    "dna": ["isolation", "claustrophobia", "group-dynamics", "power-dynamics", "societal-collapse"],
+    "description": "A dysfunctional family wakes up on Christmas to find their house sealed by a mysterious black membrane. Cryptic instructions appear on the TV, and as they comply, paranoia and power struggles tear the family apart. This is The Divide's DNA in a domestic setting -- a confined group turning on each other as an outside force applies pressure. The social commentary on authoritarianism and blind obedience hits hard. The body horror in the final act goes to genuinely disturbing places.",
+    "letterboxd": {
+      "top_positive": "A mind-bending sci-fi thriller that uses family dysfunction as a pressure cooker. The escalation is genuinely unnerving.",
+      "top_negative": "The message about media compliance is about as subtle as a sledgehammer. Characters are too stupid to root for."
+    },
+    "whereToWatch": {
+      "svod": ["Amazon Prime Video", "Shudder"],
+      "vod": ["Amazon Video", "Apple TV"],
+      "free": ["Roku Channel", "Pluto TV", "Fandango At Home Free"]
+    },
+    "sources": [
+      "https://www.reddit.com/r/MovieSuggestions/comments/1nrfcc0/a_movie_about_people_forced_to_stay_in_one_place/",
+      "https://www.imdb.com/list/ls059432532/",
+      "https://letterboxd.com/film/await-further-instructions/"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "Bug",
+    "year": 2006,
+    "director": "William Friedkin",
+    "rating": 6.1,
+    "genres": ["Psychological Horror", "Drama", "Thriller"],
+    "categories": ["psychological", "isolation", "confined"],
+    "dna": ["isolation", "claustrophobia", "psychological-horror", "bleak", "power-dynamics"],
+    "description": "William Friedkin directs Michael Shannon in this suffocating two-hander set almost entirely in a seedy Oklahoma motel room. A lonely waitress takes in a drifter who becomes convinced the room is infested with government-engineered bugs. The folie a deux spirals into full-blown paranoid psychosis. Like The Divide, it's about watching people lose their minds in a confined space, but here the apocalypse is purely internal. Shannon's performance is one of the most unhinged in horror history. The tin-foil-covered room in the climax is pure nightmare fuel.",
+    "letterboxd": {
+      "top_positive": "Michael Shannon gives one of the most terrifying performances ever committed to film. Friedkin at his most claustrophobic and unrelenting.",
+      "top_negative": "It's basically watching two people go crazy in a room for 100 minutes. Exhausting and not in a rewarding way."
+    },
+    "whereToWatch": {
+      "svod": ["Starz"],
+      "vod": ["Amazon Video", "Apple TV", "Fandango At Home"],
+      "free": ["Tubi", "Plex", "Fandango At Home Free"]
+    },
+    "sources": [
+      "https://creepycatalog.com/best-isolation-horror-movies/",
+      "https://www.melbournehorrorfilmsociety.org/home/2020/5/19/morbid-curiosity-horror-films-with-infection-and-isolation",
+      "https://www.justwatch.com/us/movie/bug"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "The Hole",
+    "year": 2001,
+    "director": "Nick Hamm",
+    "rating": 6.2,
+    "genres": ["Psychological Thriller", "Drama", "Horror"],
+    "categories": ["psychological", "bunker", "group-dynamics"],
+    "dna": ["claustrophobia", "group-dynamics", "bleak", "power-dynamics", "isolation"],
+    "description": "Four British boarding school students hide in an underground WWII bunker to skip a field trip. When their accomplice doesn't let them out, supplies run out and the group dynamics curdle. Thora Birch delivers shifting, unreliable narration that keeps reframing events. The film shares The Divide's core thesis: put people in a hole with dwindling resources and watch the social contracts dissolve. The Rashomon-style structure adds layers of manipulation and deception that make the horror deeply human.",
+    "letterboxd": {
+      "top_positive": "A clever British thriller that uses its confined setting and unreliable narration to devastating effect. Birch is magnetic.",
+      "top_negative": "Tries too hard to be twisty and ends up feeling contrived. The characters are hard to care about."
+    },
+    "whereToWatch": {
+      "svod": [],
+      "vod": ["Amazon Video", "Apple TV"],
+      "free": ["Tubi"]
+    },
+    "sources": [
+      "https://horrornews.net/58067/top-15-group-isolation-horror-films/",
+      "https://www.imdb.com/list/ls069097157/",
+      "https://letterboxd.com/film/the-hole-2001/"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "Exam",
+    "year": 2009,
+    "director": "Stuart Hazeldine",
+    "rating": 6.7,
+    "genres": ["Psychological Thriller", "Mystery", "Sci-Fi"],
+    "categories": ["psychological", "confined", "group-dynamics"],
+    "dna": ["claustrophobia", "group-dynamics", "power-dynamics", "psychological-horror"],
+    "description": "Eight candidates for a coveted corporate position are locked in a room with a single exam question on their papers -- except the papers appear blank. Rules are strict: spoil your paper and you're out. As time ticks down, alliances form and fracture, and the candidates resort to increasingly desperate tactics. Like The Divide, the confined space becomes a crucible that strips away social niceties and exposes the ruthlessness underneath. The power dynamics shift constantly as different personalities try to dominate.",
+    "letterboxd": {
+      "top_positive": "A brilliantly constructed single-room thriller that keeps you guessing until the very end. Smart and tense throughout.",
+      "top_negative": "The characters are archetypes, not people. Once you figure out the gimmick, there's not much left."
+    },
+    "whereToWatch": {
+      "svod": [],
+      "vod": ["Amazon Video"],
+      "free": ["Tubi"]
+    },
+    "sources": [
+      "https://horrornews.net/58067/top-15-group-isolation-horror-films/",
+      "https://www.imdb.com/list/ls069097157/",
+      "https://www.reddit.com/r/MovieSuggestions/comments/1gug999/i_would_like_some_movies_suggestions_similar_to/"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "Hunger",
+    "year": 2009,
+    "director": "Steven Hentges",
+    "rating": 5.2,
+    "genres": ["Horror", "Psychological Thriller", "Survival"],
+    "categories": ["survival", "psychological", "confined"],
+    "dna": ["isolation", "claustrophobia", "group-dynamics", "bleak", "power-dynamics"],
+    "description": "Five strangers are abducted and imprisoned in an underground dungeon with no food and a countdown clock. The experiment is simple: how long before they start eating each other? This is the purest distillation of The Divide's central question about what humans will do when pushed past the breaking point. The gradual psychological breakdown is methodical and unflinching. It's a grueling watch -- not because of graphic content, but because of the slow inevitability of what's coming.",
+    "letterboxd": {
+      "top_positive": "Takes a simple premise and mines it for genuine psychological horror. The descent is patient and deeply uncomfortable.",
+      "top_negative": "A one-note exercise in misery. Once you know the premise, there are no surprises -- just waiting for the inevitable."
+    },
+    "whereToWatch": {
+      "svod": [],
+      "vod": ["Amazon Video"],
+      "free": ["Tubi", "Roku Channel"]
+    },
+    "sources": [
+      "https://horrornews.net/58067/top-15-group-isolation-horror-films/",
+      "https://www.imdb.com/list/ls069097157/",
+      "https://tubitv.com/movies/504692/hunger"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "We Need to Do Something",
+    "year": 2021,
+    "director": "Sean King O'Grady",
+    "rating": 4.6,
+    "genres": ["Horror", "Thriller", "Dark Comedy"],
+    "categories": ["isolation", "psychological", "confined"],
+    "dna": ["claustrophobia", "group-dynamics", "bleak", "psychological-horror", "isolation"],
+    "description": "A family of four takes shelter in their bathroom during a tornado. A fallen tree blocks the door. Days pass. No one comes. As dehydration and hunger set in, the family's dysfunction erupts -- the abusive father, the guilty teenager hiding a dark secret, the mother trying to hold it together. Strange and terrifying things begin happening outside the door. Like The Divide, it uses catastrophe as the catalyst for human ugliness to surface, but adds an occult layer that pushes it into genuinely weird territory. The bathroom setting is oppressively small.",
+    "letterboxd": {
+      "top_positive": "Wildly ambitious for a single-room horror. The practical effects are disgusting in the best way, and the family dynamics feel painfully real.",
+      "top_negative": "An absolute mess that can't decide if it wants to be a family drama or Lovecraftian horror. The ending is nonsensical."
+    },
+    "whereToWatch": {
+      "svod": ["AMC+", "Sundance Now", "Philo"],
+      "vod": ["Apple TV", "Amazon Video", "Fandango At Home"],
+      "free": ["Kanopy"]
+    },
+    "sources": [
+      "https://creepycatalog.com/best-isolation-horror-movies/",
+      "https://www.justwatch.com/us/movie/we-need-to-do-something",
+      "https://swampflix.com/2021/10/26/we-need-to-do-something-2021/"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "Vivarium",
+    "year": 2019,
+    "director": "Lorcan Finnegan",
+    "rating": 5.8,
+    "genres": ["Sci-Fi", "Horror", "Thriller"],
+    "categories": ["isolation", "psychological", "existential"],
+    "dna": ["isolation", "claustrophobia", "bleak", "psychological-horror", "group-dynamics"],
+    "description": "A young couple visits a suburban housing development and becomes trapped in a labyrinth of identical houses with no way out. They're forced to raise a mysterious child that grows at an unnatural rate. The existential dread here is suffocating -- like The Divide, it's about people slowly losing their minds in confinement, but through an absurdist lens. Jesse Eisenberg's character descends into obsessive, self-destructive behavior that mirrors the deterioration of The Divide's survivors. The pastel suburban nightmare is its own kind of bunker.",
+    "letterboxd": {
+      "top_positive": "A Kafkaesque nightmare about suburban domesticity. Imogen Poots deserves better than this world -- and she knows it.",
+      "top_negative": "Stretches a Twilight Zone episode to feature length. The metaphor is obvious from minute five and never deepens."
+    },
+    "whereToWatch": {
+      "svod": ["Amazon Prime Video"],
+      "vod": ["Amazon Video", "Apple TV", "Fandango At Home"],
+      "free": ["Tubi", "Plex", "Hoopla", "Roku Channel"]
+    },
+    "sources": [
+      "https://creepycatalog.com/best-isolation-horror-movies/",
+      "https://www.justwatch.com/us/movie/vivarium",
+      "https://tubitv.com/movies/100033590/vivarium"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "The Killing Room",
+    "year": 2009,
+    "director": "Jonathan Liebesman",
+    "rating": 5.6,
+    "genres": ["Thriller", "Psychological Horror", "Mystery"],
+    "categories": ["psychological", "confined", "group-dynamics"],
+    "dna": ["claustrophobia", "group-dynamics", "power-dynamics", "bleak", "psychological-horror"],
+    "description": "Four volunteers sign up for what they think is a simple psychological study. They're locked in a white room. Then one of them is shot in the head. The study is real: a classified government program testing who breaks and who endures. Timothy Hutton, Clea DuVall, and Peter Stormare bring gravitas to a premise that could have been pulpy. Like The Divide, the horror comes from watching ordinary people subjected to extraordinary pressure, with authority figures pulling the strings from behind glass.",
+    "letterboxd": {
+      "top_positive": "Taut, well-acted thriller that earns its paranoia. Stormare is chilling as always. The MKUltra angle adds historical weight.",
+      "top_negative": "Starts strong but the third act reveals are predictable. The government conspiracy angle is half-baked."
+    },
+    "whereToWatch": {
+      "svod": [],
+      "vod": ["Amazon Video", "Apple TV"],
+      "free": []
+    },
+    "sources": [
+      "https://horrornews.net/58067/top-15-group-isolation-horror-films/",
+      "https://www.imdb.com/list/ls069097157/",
+      "https://www.justwatch.com/us/movie/the-killing-room"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "Gehenna: Where Death Lives",
+    "year": 2016,
+    "director": "Hiroshi Katagiri",
+    "rating": 4.9,
+    "genres": ["Horror", "Thriller", "Supernatural"],
+    "categories": ["bunker", "survival", "psychological"],
+    "dna": ["claustrophobia", "group-dynamics", "isolation", "bleak", "bunker"],
+    "description": "A resort development team in Saipan discovers an old Japanese WWII bunker during a site survey and descends inside. The bunker has its own rules -- time works differently, an ancient evil lurks, and the group begins to fracture. Recommended directly on the r/horror thread about movies like The Divide, this one combines the confined underground setting with supernatural elements. The bunker itself is a character, and the group dynamics under pressure deliver genuine tension even when the creature effects are uneven.",
+    "letterboxd": {
+      "top_positive": "A genuinely creepy bunker horror that uses its Saipan setting and WWII history to elevate standard genre fare. The old man is terrifying.",
+      "top_negative": "Decent first half that falls apart once the monster fully reveals itself. The time-loop element is undercooked."
+    },
+    "whereToWatch": {
+      "svod": [],
+      "vod": ["Amazon Video"],
+      "free": []
+    },
+    "sources": [
+      "https://www.reddit.com/r/horror/comments/1ndjo27/i_loved_the_divide_and_10_cloverfield_lane_any/",
+      "https://scariesthings.com/2018/05/15/roberts-review-gehenna-where-death-lives-2016/",
+      "https://archive.gnofhorror.com/film-reviews/film-review-gehenna-where-death-lives-dir-hiroshi-katagiri.html"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "Mine 9",
+    "year": 2019,
+    "director": "Eddie Mensore",
+    "rating": 6.0,
+    "genres": ["Drama", "Thriller", "Survival"],
+    "categories": ["survival", "confined", "group-dynamics"],
+    "dna": ["claustrophobia", "group-dynamics", "bleak", "survival", "isolation"],
+    "description": "Nine Appalachian coal miners are trapped 2 miles underground after a methane explosion. With limited oxygen and no certainty of rescue, the group must navigate flooded tunnels and failing equipment while holding together psychologically. Shot with documentary-level realism in real coal mines, this is survival horror stripped of all genre artifice. Like The Divide, it's about a group in a hole deciding whether cooperation or self-preservation wins. The Appalachian setting adds class-conscious weight -- these men were already trapped by economics before the mine sealed them in.",
+    "letterboxd": {
+      "top_positive": "Shot with intense realism in actual coal mines. The claustrophobia is physical and the performances are lived-in.",
+      "top_negative": "Gritty and well-intentioned but dramatically inert. The miners are too noble for the film to find any real tension."
+    },
+    "whereToWatch": {
+      "svod": [],
+      "vod": ["Amazon Video"],
+      "free": ["Kanopy"]
+    },
+    "sources": [
+      "https://letterboxd.com/wraithape/list/underground-horror/",
+      "https://www.justwatch.com/us/movie/mine-9",
+      "https://www.facebook.com/groups/121470818268189/posts/2361175187631063/"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "Would You Rather",
+    "year": 2012,
+    "director": "David Guy Levy",
+    "rating": 5.7,
+    "genres": ["Horror", "Thriller", "Psychological"],
+    "categories": ["psychological", "confined", "group-dynamics"],
+    "dna": ["group-dynamics", "power-dynamics", "bleak", "psychological-horror", "claustrophobia"],
+    "description": "Eight desperate people accept a dinner invitation from a wealthy aristocrat played by Jeffrey Combs. The game: 'Would You Rather' with lethal stakes. Each round forces participants to choose between inflicting pain on themselves or others. Like The Divide's power dynamics, a sadistic authority figure controls the environment while the captives reveal their true natures. Brittany Snow anchors the film with genuine vulnerability, and Combs chews scenery with aristocratic menace. The ending is mercilessly bleak.",
+    "letterboxd": {
+      "top_positive": "Jeffrey Combs elevates everything he's in. The dinner party format keeps things tight and the final scene is a genuine gut-punch.",
+      "top_negative": "Diet Saw with a dinner party veneer. The moral dilemmas are too obviously constructed to feel real."
+    },
+    "whereToWatch": {
+      "svod": ["Hulu", "Shudder", "Paramount+", "Philo"],
+      "vod": ["Amazon Video", "Apple TV", "Fandango At Home"],
+      "free": ["Tubi", "Kanopy"]
+    },
+    "sources": [
+      "https://horrornews.net/58067/top-15-group-isolation-horror-films/",
+      "https://www.imdb.com/list/ls069097157/",
+      "https://tubitv.com/movies/684117/would-you-rather"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "Vile",
+    "year": 2011,
+    "director": "Taylor Sheridan",
+    "rating": 4.8,
+    "genres": ["Horror", "Thriller", "Survival"],
+    "categories": ["survival", "confined", "group-dynamics"],
+    "dna": ["group-dynamics", "claustrophobia", "bleak", "power-dynamics", "psychological-horror"],
+    "description": "A group of friends are kidnapped and locked in a house with vials attached to their brainstems. To fill the vials and unlock the doors, they must trigger their bodies to produce certain chemicals -- through extreme pain. The catch: they have to inflict it on each other. This is The Divide's group-turning-on-each-other premise distilled to its purest form. Early Taylor Sheridan directorial work (before Sicario/Yellowstone fame) with rough edges but genuine tension in watching ordinary people negotiate who suffers and how much.",
+    "letterboxd": {
+      "top_positive": "A nasty little film that finds tension in the negotiations between captives. The premise forces genuine moral horror.",
+      "top_negative": "Bottom-shelf torture porn with zero character development. The Saw influence is too naked to feel original."
+    },
+    "whereToWatch": {
+      "svod": [],
+      "vod": ["Amazon Video"],
+      "free": ["Tubi", "Plex", "Hoopla", "Kanopy"]
+    },
+    "sources": [
+      "https://horrornews.net/58067/top-15-group-isolation-horror-films/",
+      "https://www.justwatch.com/us/movie/vile"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "House of 9",
+    "year": 2005,
+    "director": "Steven R. Monroe",
+    "rating": 5.3,
+    "genres": ["Horror", "Thriller", "Psychological"],
+    "categories": ["psychological", "confined", "group-dynamics"],
+    "dna": ["isolation", "group-dynamics", "power-dynamics", "bleak", "claustrophobia"],
+    "description": "Nine strangers -- including a priest, a cop, a dancer, and a tennis player -- are drugged, kidnapped, and locked in a house. A voice tells them the last one alive wins five million dollars. Dennis Hopper anchors the cast as the moral compass who slowly realizes morality has no currency here. This is pure Divide territory: diverse personalities stripped of societal roles and forced to negotiate survival in a sealed space. The kills escalate as alliances form and shatter. Hopper's late-career commitment elevates what could have been disposable.",
+    "letterboxd": {
+      "top_positive": "Dennis Hopper in a confined horror? Sign me up. He brings gravity to a premise that could have been trashy.",
+      "top_negative": "A Big Brother episode with murder. The characters are one-dimensional archetypes feeding a mechanical plot."
+    },
+    "whereToWatch": {
+      "svod": ["Amazon Prime Video"],
+      "vod": ["Amazon Video", "Apple TV", "Fandango At Home"],
+      "free": ["Tubi", "Plex", "Hoopla", "Roku Channel"]
+    },
+    "sources": [
+      "https://horrornews.net/58067/top-15-group-isolation-horror-films/",
+      "https://www.justwatch.com/us/movie/house-of-9",
+      "https://tubitv.com/movies/647725/house-of-9"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "Crawl or Die",
+    "year": 2014,
+    "director": "Oklahoma Ward",
+    "rating": 4.3,
+    "genres": ["Sci-Fi", "Horror", "Survival"],
+    "categories": ["survival", "confined", "claustrophobic"],
+    "dna": ["claustrophobia", "survival", "bleak", "isolation", "group-dynamics"],
+    "description": "In a post-apocalyptic future, a special ops team must escort the last fertile woman on Earth through increasingly narrow underground tunnels while being hunted by an alien creature. The tunnels get progressively tighter until characters can barely move -- this may be the most physically claustrophobic film ever made. Shot in real confined spaces with no CGI trickery. Like The Divide's basement, the environment itself becomes the primary antagonist, squeezing both characters and audience to the breaking point. Micro-budget but utterly committed to its suffocating premise.",
+    "letterboxd": {
+      "top_positive": "Definitely the most claustrophobic movie ever made. The shrinking tunnel concept is genius and the practical execution is jaw-dropping for the budget.",
+      "top_negative": "A massive snoozefest. A dwindling number of people crawling through confined spaces is the entire movie. That's it."
+    },
+    "whereToWatch": {
+      "svod": [],
+      "vod": ["Amazon Video"],
+      "free": ["Tubi"]
+    },
+    "sources": [
+      "https://letterboxd.com/wraithape/list/underground-horror/",
+      "https://spacejockeyreviews.com/crawl-or-die/",
+      "https://letterboxd.com/rcdoom9113/film/crawl-or-die/"
+    ],
+    "tmdbId": null
+  },
+  {
+    "title": "Circle",
+    "year": 2015,
+    "director": "Aaron Hann, Mario Miscione",
+    "rating": 6.0,
+    "genres": ["Sci-Fi", "Thriller", "Drama"],
+    "categories": ["psychological", "confined", "group-dynamics"],
+    "dna": ["group-dynamics", "power-dynamics", "bleak", "psychological-horror", "societal-collapse"],
+    "description": "Fifty strangers wake standing in a circle. Every two minutes, one person dies -- voted out by the group. If no consensus, the orb in the center chooses randomly. What follows is a compressed simulation of societal collapse: racism, ageism, class warfare, and tribalism all surface as people argue for their lives. It's The Divide's group dynamics turned into a lethal debate club. No weapons, no physical violence -- just persuasion, manipulation, and the exposure of prejudice under existential pressure. The ending is cold.",
+    "letterboxd": {
+      "top_positive": "A brilliant social experiment film that exposes how quickly people sort into tribes when survival is at stake. The debates feel chillingly authentic.",
+      "top_negative": "A 12 Angry Men knockoff with a sci-fi coat of paint. The moralizing is heavy-handed and the characters are mouthpieces."
+    },
+    "whereToWatch": {
+      "svod": ["Netflix"],
+      "vod": ["Amazon Video", "Apple TV"],
+      "free": []
+    },
+    "sources": [
+      "https://horrornews.net/58067/top-15-group-isolation-horror-films/",
+      "https://www.imdb.com/list/ls069097157/",
+      "https://www.justwatch.com/us/movie/circle-2015"
+    ],
+    "tmdbId": null
+  }
+]
