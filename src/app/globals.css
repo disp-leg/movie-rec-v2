@@ -69,3 +69,18 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Category row horizontal scroll */
+.category-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.category-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth expand/collapse */
+.expand-transition {
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+}

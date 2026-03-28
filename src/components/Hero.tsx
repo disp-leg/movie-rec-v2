@@ -1,70 +1,84 @@
 "use client";
 
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { getPosterUrl } from "@/lib/posters";
+import { getTitleColor } from "@/lib/poster";
 
 export default function Hero() {
-  const { ref, isVisible } = useScrollReveal({ threshold: 0.15 });
+  const featuredTitle = "Right at Your Door";
+  const posterUrl = getPosterUrl(featuredTitle);
+  const { from, to } = getTitleColor(featuredTitle);
 
   return (
     <section
-      ref={ref}
-      className="min-h-screen flex items-center justify-center px-6 bg-surface-secondary relative"
+      style={{
+        position: "relative",
+        height: "85vh",
+        minHeight: 540,
+        width: "100%",
+        overflow: "hidden",
+        background: posterUrl
+          ? undefined
+          : `linear-gradient(165deg, ${from}, ${to}, #1D1D1F)`,
+      }}
     >
+      {posterUrl && (
+        <img
+          src={posterUrl}
+          alt={featuredTitle}
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center top",
+          }}
+        />
+      )}
+
+      {/* Dark gradient overlay */}
       <div
-        className={`text-center transition-all duration-700 ease-out ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-        }`}
+        style={{
+          position: "absolute",
+          inset: 0,
+          background:
+            "linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.7) 85%, rgba(0,0,0,0.85) 100%)",
+        }}
+      />
+
+      {/* Content */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          padding: "0 20px 48px",
+        }}
       >
-        <h1 className="text-[48px] font-extrabold text-text-primary leading-tight">
-          Movie{" "}
-          <span className="relative inline-block">
-            Rec
-            <svg
-              className="absolute -bottom-2 left-0 w-full"
-              viewBox="0 0 80 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M2 8C12 3 22 10 32 6C42 2 52 9 62 5C72 1 78 7 78 7"
-                stroke="#0496FF"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-              />
-            </svg>
-          </span>
+        <h1
+          style={{
+            color: "#FFFFFF",
+            fontSize: 34,
+            fontWeight: 800,
+            lineHeight: 1.2,
+            letterSpacing: "-0.02em",
+            marginBottom: 8,
+          }}
+        >
+          Movie Rec
         </h1>
-        <p className="text-[18px] font-normal text-text-secondary mt-6 max-w-md mx-auto leading-relaxed">
+        <p
+          style={{
+            color: "rgba(255,255,255,0.7)",
+            fontSize: 17,
+            fontWeight: 400,
+            lineHeight: 1.4,
+            letterSpacing: "-0.01em",
+          }}
+        >
           26 films for the ones who liked it bleak
         </p>
-      </div>
-
-      <div
-        className={`absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-700 ease-out delay-300 ${
-          isVisible ? "opacity-50" : "opacity-0"
-        }`}
-      >
-        <span className="text-[14px] font-normal text-text-secondary">
-          Scroll down
-        </span>
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M5 10C8 13 10 15 12 17C14 15 16 13 19 10"
-            stroke="#0496FF"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
       </div>
     </section>
   );

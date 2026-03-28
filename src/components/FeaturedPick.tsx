@@ -1,70 +1,117 @@
 "use client";
 
 import { movies } from "@/lib/movies";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+import MoviePoster from "@/components/MoviePoster";
 
 export default function FeaturedPick() {
-  const { ref, isVisible } = useScrollReveal({ threshold: 0.15 });
-  const movie = movies[0];
-
-  if (!movie) return null;
+  const featured = movies[0]; // Right at Your Door
 
   return (
-    <section ref={ref} className="py-24 px-6 bg-surface">
-      <div
-        className={`max-w-2xl mx-auto transition-all duration-700 ease-out ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-        }`}
+    <section
+      style={{
+        padding: "48px 20px",
+        backgroundColor: "#FFFFFF",
+      }}
+    >
+      {/* Label */}
+      <p
+        style={{
+          fontSize: 13,
+          fontWeight: 600,
+          letterSpacing: "0.08em",
+          textTransform: "uppercase",
+          color: "#0496FF",
+          marginBottom: 16,
+        }}
       >
-        {/* Poster placeholder */}
+        Start here
+      </p>
+
+      {/* Large poster */}
+      <div
+        style={{
+          width: "100%",
+          aspectRatio: "2 / 3",
+          borderRadius: 12,
+          overflow: "hidden",
+          marginBottom: 20,
+          maxWidth: 400,
+        }}
+      >
+        <MoviePoster
+          title={featured.title}
+          size="hero"
+          rounded={12}
+        />
+      </div>
+
+      {/* Title and metadata */}
+      <h2
+        style={{
+          fontSize: 22,
+          fontWeight: 700,
+          color: "#1D1D1F",
+          lineHeight: 1.2,
+          marginBottom: 4,
+          letterSpacing: "-0.02em",
+        }}
+      >
+        {featured.title}
+      </h2>
+      <p
+        style={{
+          fontSize: 15,
+          color: "#6E6E73",
+          marginBottom: 16,
+          lineHeight: 1.4,
+        }}
+      >
+        {featured.year} &middot; {featured.director} &middot;{" "}
+        {featured.rating.toFixed(1)}
+      </p>
+
+      {/* Description */}
+      <p
+        style={{
+          fontSize: 17,
+          color: "#1D1D1F",
+          lineHeight: 1.5,
+          letterSpacing: "-0.01em",
+        }}
+      >
+        {featured.description}
+      </p>
+
+      {/* Letterboxd quote */}
+      {featured.letterboxd.top_positive && (
         <div
-          className="w-full rounded-sm overflow-hidden mb-8"
           style={{
-            aspectRatio: "2 / 3",
-            background: "linear-gradient(160deg, #E5E5EA 0%, #D1D1D6 100%)",
+            marginTop: 24,
+            paddingLeft: 16,
+            borderLeft: "3px solid #0496FF",
           }}
         >
-          <div className="w-full h-full flex items-center justify-center px-8">
-            <span className="text-text-secondary text-[20px] font-semibold text-center leading-snug">
-              {movie.title}
-            </span>
-          </div>
+          <p
+            style={{
+              fontSize: 15,
+              color: "#6E6E73",
+              lineHeight: 1.5,
+              fontStyle: "italic",
+            }}
+          >
+            &ldquo;{featured.letterboxd.top_positive}&rdquo;
+          </p>
+          <p
+            style={{
+              fontSize: 13,
+              color: "#6E6E73",
+              marginTop: 4,
+            }}
+          >
+            Letterboxd review
+          </p>
         </div>
-
-        {/* Title and year */}
-        <h2 className="text-[36px] font-bold text-text-primary leading-tight">
-          {movie.title}
-        </h2>
-        <p className="text-[14px] font-normal text-text-secondary mt-1">
-          {movie.year} &middot; Directed by {movie.director}
-        </p>
-
-        {/* Description */}
-        <p className="text-[18px] font-normal text-text-primary leading-[1.6] mt-6">
-          {movie.description}
-        </p>
-
-        {/* Genres */}
-        <p className="text-[14px] font-normal text-text-secondary mt-4">
-          {movie.genres.join(", ")}
-        </p>
-
-        {/* Letterboxd quotes */}
-        {movie.letterboxd.top_positive && (
-          <blockquote className="mt-8 pl-4 border-l-2 border-accent">
-            <p className="text-[15px] font-normal text-text-secondary leading-relaxed italic">
-              &ldquo;{movie.letterboxd.top_positive}&rdquo;
-            </p>
-          </blockquote>
-        )}
-        {movie.letterboxd.top_negative && (
-          <blockquote className="mt-4 pl-4 border-l-2 border-accent">
-            <p className="text-[15px] font-normal text-text-secondary leading-relaxed italic">
-              &ldquo;{movie.letterboxd.top_negative}&rdquo;
-            </p>
-          </blockquote>
-        )}
-      </div>
+      )}
     </section>
   );
 }
