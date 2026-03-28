@@ -1,3 +1,5 @@
+@~/.claude/docs/node-operating.md
+
 # Movie Recommendation App v2 — Node Operating Manual
 
 ## Project Overview
@@ -138,7 +140,7 @@ Track user signals: save, skip, watch, favorite.
 
 | Environment | Platform | Trigger |
 |-------------|----------|---------|
-| Production | Netlify | Auto on push |
+| Production | GitHub Pages | Auto on push to main |
 
 - Repo: `disp-leg/movie-rec-v2`
 - CI/CD from day one
@@ -191,3 +193,28 @@ Keypad, shader, skeuomorphism, swipe, throw
 - Deployed to Railway production
 - Clean git history
 - This CLAUDE.md updated with lessons learned
+
+---
+
+## Assumptions
+
+<!-- Log every assumption. Tag each: [VERIFIED], [UNVERIFIED], or [INVALID] -->
+
+## Approval Scope
+
+**You decide (Level 1):** Implementation approach, animation choices, component structure, test strategy
+**Escalate to liaison (Level 2):** Additional agents, scope changes, timeline extensions >25%
+**Escalate to Yuna/operators (Level 3):** Phase gate approvals, completion, abort
+
+## Pre-Graduation Self-Review
+
+- [ ] Does the deliverable match what was asked?
+- [ ] Does the app build without errors?
+- [ ] Were all tests run and passing?
+- [ ] Is the `## Assumptions` section up to date?
+- [ ] Are lessons learned documented?
+- [ ] Is the deliverable statement written?
+
+## Lessons Learned
+
+## Deliverable
