@@ -1,23 +1,27 @@
 @import "tailwindcss";
 
 @theme {
-  --color-surface: #1F2029;
-  --color-surface-elevated: #272833;
-  --color-text-primary: #F4F4F4;
-  --color-text-secondary: #9CA3AF;
-  --color-accent: #D4523E;
-  --color-accent-hover: #E05E49;
-  --color-separator: #2E2F3A;
+  --color-surface: #FFFFFF;
+  --color-surface-secondary: #F5F5F7;
+  --color-surface-elevated: #FFFFFF;
+  --color-text-primary: #1D1D1F;
+  --color-text-secondary: #6E6E73;
+  --color-accent: #0496FF;
+  --color-accent-hover: #3DB1FF;
+  --color-separator: #E5E5EA;
+  --color-overlay: rgba(0, 0, 0, 0.55);
 }
 
 :root {
-  --surface: #1F2029;
-  --surface-elevated: #272833;
-  --text-primary: #F4F4F4;
-  --text-secondary: #9CA3AF;
-  --accent: #D4523E;
-  --accent-hover: #E05E49;
-  --separator: #2E2F3A;
+  --surface: #FFFFFF;
+  --surface-secondary: #F5F5F7;
+  --surface-elevated: #FFFFFF;
+  --text-primary: #1D1D1F;
+  --text-secondary: #6E6E73;
+  --accent: #0496FF;
+  --accent-hover: #3DB1FF;
+  --separator: #E5E5EA;
+  --overlay: rgba(0, 0, 0, 0.55);
 }
 
 body {
@@ -32,4 +36,36 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default button styling */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+}
+
+/* Line clamp utility */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Hide scrollbar for clean editorial feel */
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
