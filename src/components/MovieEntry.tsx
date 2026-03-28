@@ -152,14 +152,14 @@ export default function MovieEntry({
           >
             <BookmarkIcon filled={isSaved} />
             <span className="text-[13px] text-text-secondary">
-              {isSaved ? "Saved" : "Save"}
+              {isSaved ? "Saved" : "Save for later"}
             </span>
           </button>
           <button
             onClick={(e) => { e.stopPropagation(); onMarkSeen(); }}
             className="text-[13px] text-text-secondary hover:text-text-primary transition-colors py-1"
           >
-            Already watched
+            Already seen
           </button>
           <button
             onClick={(e) => { e.stopPropagation(); onSkip(); }}

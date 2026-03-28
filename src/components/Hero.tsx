@@ -38,7 +38,7 @@ export default function Hero() {
           </span>
         </h1>
         <p className="text-[18px] font-normal text-text-secondary mt-6 max-w-md mx-auto leading-relaxed">
-          Films that share DNA with The Divide
+          26 films for the ones who liked it bleak
         </p>
       </div>
 
@@ -48,7 +48,7 @@ export default function Hero() {
         }`}
       >
         <span className="text-[14px] font-normal text-text-secondary">
-          Scroll to explore
+          Scroll down
         </span>
         <svg
           width="24"

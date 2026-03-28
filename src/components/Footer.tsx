@@ -32,10 +32,10 @@ export default function Footer() {
         </div>
 
         <p className="text-[14px] font-normal text-text-secondary">
-          Curated for Riamont
+          A film list, not an algorithm
         </p>
         <p className="text-[12px] font-normal text-text-secondary opacity-60 mt-2">
-          Based on The Divide (2011)
+          Seeded from The Divide (2011, dir. Xavier Gens)
         </p>
       </div>
     </footer>

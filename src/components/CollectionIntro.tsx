@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const LINE_1_WORDS = "26 films you haven't seen.".split(" ");
-const LINE_2_WORDS = "All cut from the same cloth as The Divide.".split(" ");
+const LINE_1_WORDS = "You watched The Divide and wanted more.".split(" ");
+const LINE_2_WORDS = "We pulled 26 films from the same dark corner.".split(" ");
 
 export default function CollectionIntro() {
   const sectionRef = useRef<HTMLElement>(null);

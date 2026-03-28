@@ -13,14 +13,14 @@ const VARIANTS: Array<"full-bleed" | "inset" | "landscape" | "text-first"> = [
 ];
 
 const CATEGORY_LABELS: Record<string, { label: string; sublabel?: string }> = {
-  survival: { label: "Survival Stories", sublabel: "When endurance is all that matters" },
-  isolation: { label: "Sealed In", sublabel: "Nowhere to go, no one to trust" },
-  bunker: { label: "Bunker Films", sublabel: "Underground. Claustrophobic. Inescapable." },
-  psychological: { label: "Psychological Edge", sublabel: "The mind breaks before the body" },
-  "group-dynamics": { label: "Group Dynamics", sublabel: "People crumble differently under pressure" },
-  "post-apocalyptic": { label: "After the End", sublabel: "What remains when everything is gone" },
-  claustrophobic: { label: "Tight Spaces", sublabel: "The walls are closing in" },
-  confined: { label: "Confined", sublabel: "No way out" },
+  survival: { label: "Sealed in", sublabel: "Bunkers, shelters, and nowhere to go" },
+  isolation: { label: "Sealed in", sublabel: "Bunkers, shelters, and nowhere to go" },
+  bunker: { label: "Sealed in", sublabel: "Bunkers, shelters, and nowhere to go" },
+  psychological: { label: "Slow rot", sublabel: "Dread that builds by the frame" },
+  "group-dynamics": { label: "Fracture point", sublabel: "When the group turns on itself" },
+  "post-apocalyptic": { label: "After everything", sublabel: "What remains when the dust settles" },
+  claustrophobic: { label: "Sealed in", sublabel: "Bunkers, shelters, and nowhere to go" },
+  confined: { label: "Sealed in", sublabel: "Bunkers, shelters, and nowhere to go" },
 };
 
 interface MovieBrowseProps {
