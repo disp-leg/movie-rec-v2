@@ -1,0 +1,622 @@
+<mxfile host="app.diagrams.net" modified="2026-03-27T12:00:00.000Z" agent="Movie Rec UX" version="24.0.0" type="device">
+  <diagram id="movie-rec-v2-mockup" name="Mobile Flow">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="475" pageHeight="6800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ========================================== -->
+        <!-- DEVICE FRAME                               -->
+        <!-- ========================================== -->
+        <mxCell id="frame" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2;fillColor=#1F2029;strokeColor=#3A3B47;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="375" height="6700" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- ZONE 1: HERO (0 - 667px)                  -->
+        <!-- ========================================== -->
+
+        <!-- Hero Background Poster Placeholder -->
+        <mxCell id="hero-poster" value="HERO POSTER IMAGE&#xa;(The Divide, dimmed)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A2B36;strokeColor=none;fontColor=#555566;fontSize=11;fontFamily=Inter;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="375" height="667" as="geometry" />
+        </mxCell>
+
+        <!-- Hero Overlay -->
+        <mxCell id="hero-overlay" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2029;strokeColor=none;opacity=65;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="375" height="667" as="geometry" />
+        </mxCell>
+
+        <!-- Hero Title: MOVIE REC -->
+        <mxCell id="hero-title-movie" value="MOVIE" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=48;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="97" y="188" width="280" height="68" as="geometry" />
+        </mxCell>
+
+        <mxCell id="hero-title-rec" value="REC" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=48;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="157" y="256" width="160" height="68" as="geometry" />
+        </mxCell>
+
+        <!-- Hand-drawn wavy underline under REC -->
+        <mxCell id="hero-underline" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=0;size=0.1;rotation=-90;strokeColor=#D4523E;strokeWidth=3;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="167" y="305" width="140" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Wavy underline alternative (simple path) -->
+        <mxCell id="hero-wavy" value="" style="endArrow=none;html=1;curved=1;strokeColor=#D4523E;strokeWidth=3;entryX=1;entryY=0.5;exitX=0;exitY=0.5;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="324" as="sourcePoint" />
+            <mxPoint x="310" y="324" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="185" y="318" />
+              <mxPoint x="210" y="330" />
+              <mxPoint x="237" y="318" />
+              <mxPoint x="262" y="330" />
+              <mxPoint x="287" y="318" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Tagline -->
+        <mxCell id="hero-tagline" value="Films that share DNA with The Divide" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=16;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="77" y="345" width="320" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- Scroll prompt -->
+        <mxCell id="scroll-prompt" value="Scroll to explore" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=12;fontFamily=Inter;opacity=60;" vertex="1" parent="1">
+          <mxGeometry x="167" y="623" width="140" height="26" as="geometry" />
+        </mxCell>
+
+        <!-- Hand-drawn down arrow -->
+        <mxCell id="hero-arrow" value="" style="endArrow=open;html=1;strokeColor=#9CA3AF;strokeWidth=2;opacity=40;endSize=8;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="237" y="652" as="sourcePoint" />
+            <mxPoint x="237" y="676" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- ZONE 2: COLLECTION INTRO (700 - 1100px)   -->
+        <!-- ========================================== -->
+
+        <!-- Zone 2 Background -->
+        <mxCell id="z2-bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2029;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="50" y="700" width="375" height="400" as="geometry" />
+        </mxCell>
+
+        <!-- Word-by-word reveal text (showing mid-scroll state) -->
+        <!-- Revealed words in bright white -->
+        <mxCell id="z2-text-1" value="26 films you" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=28;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="74" y="820" width="260" height="44" as="geometry" />
+        </mxCell>
+
+        <mxCell id="z2-text-2" value="haven't seen." style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=28;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="74" y="864" width="290" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- Unrevealed words dimmed (showing scroll-in-progress state) -->
+        <mxCell id="z2-text-3" value="All share DNA" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=28;fontFamily=Inter;fontStyle=1;opacity=40;" vertex="1" parent="1">
+          <mxGeometry x="74" y="912" width="280" height="44" as="geometry" />
+        </mxCell>
+
+        <mxCell id="z2-text-4" value="with The Divide." style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=28;fontFamily=Inter;fontStyle=1;opacity=20;" vertex="1" parent="1">
+          <mxGeometry x="74" y="956" width="320" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- Hand-drawn arrow below Zone 2 -->
+        <mxCell id="z2-arrow" value="" style="endArrow=open;html=1;curved=1;strokeColor=#D4523E;strokeWidth=3;endSize=10;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="235" y="1040" as="sourcePoint" />
+            <mxPoint x="240" y="1080" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="245" y="1055" />
+              <mxPoint x="232" y="1068" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Zone 2 annotation -->
+        <mxCell id="z2-label" value="ZONE 2: COLLECTION INTRO&#xa;Words reveal one-by-one as user scrolls.&#xa;Shown here mid-scroll." style="text;html=1;align=right;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=9;fontFamily=Inter;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="440" y="820" width="230" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- ZONE 3: FEATURED PICK (1120 - 1900px)     -->
+        <!-- ========================================== -->
+
+        <!-- Featured poster - full bleed -->
+        <mxCell id="z3-poster" value="RIGHT AT YOUR DOOR&#xa;(2006)&#xa;&#xa;FULL-BLEED POSTER&#xa;375 x 500px&#xa;Edge to edge, no padding" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A2B36;strokeColor=none;fontColor=#555566;fontSize=12;fontFamily=Inter;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1120" width="375" height="500" as="geometry" />
+        </mxCell>
+
+        <!-- Featured Title -->
+        <mxCell id="z3-title" value="Right at Your Door" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=32;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="74" y="1644" width="340" height="48" as="geometry" />
+        </mxCell>
+
+        <!-- Year with hand-drawn circle accent -->
+        <mxCell id="z3-year" value="2006" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=14;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="74" y="1696" width="50" height="26" as="geometry" />
+        </mxCell>
+
+        <!-- Hand-drawn circle around year -->
+        <mxCell id="z3-circle" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#D4523E;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="66" y="1690" width="68" height="38" as="geometry" />
+        </mxCell>
+
+        <!-- Featured Description -->
+        <mxCell id="z3-desc" value="A dirty bomb goes off in LA and a husband seals himself inside his home, shutting his wife out. The confined-space paranoia and gut-punch twist share The Divide's unflinching bleakness about what people do to survive." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=16;fontFamily=Inter;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="74" y="1736" width="327" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Genre labels (plain text, not pills) -->
+        <mxCell id="z3-genres" value="Thriller, Drama, Survival" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=13;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="74" y="1868" width="190" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Zone 3 annotation -->
+        <mxCell id="z3-label" value="ZONE 3: FEATURED PICK&#xa;Full editorial attention on one film.&#xa;Poster is full-bleed, edge to edge." style="text;html=1;align=right;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=9;fontFamily=Inter;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1300" width="210" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- ZONE 4: THE BROWSE (1950 - 4600px)        -->
+        <!-- ========================================== -->
+
+        <!-- Section Heading -->
+        <mxCell id="z4-heading" value="The Collection" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=32;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="74" y="1960" width="280" height="48" as="geometry" />
+        </mxCell>
+
+        <!-- Wavy underline under "Collection" -->
+        <mxCell id="z4-wavy" value="" style="endArrow=none;html=1;curved=1;strokeColor=#D4523E;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="74" y="2010" as="sourcePoint" />
+            <mxPoint x="280" y="2010" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="104" y="2004" />
+              <mxPoint x="134" y="2016" />
+              <mxPoint x="164" y="2004" />
+              <mxPoint x="194" y="2016" />
+              <mxPoint x="224" y="2004" />
+              <mxPoint x="254" y="2016" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ======== MOVIE 1: Variant A - Full Bleed ======== -->
+
+        <!-- Movie 1 Poster -->
+        <mxCell id="m1-poster" value="AFTERMATH (2014)&#xa;POSTER&#xa;Full-Bleed" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A2B36;strokeColor=none;fontColor=#555566;fontSize=11;fontFamily=Inter;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="50" y="2060" width="375" height="460" as="geometry" />
+        </mxCell>
+
+        <!-- Movie 1 Title -->
+        <mxCell id="m1-title" value="Aftermath" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=24;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="74" y="2536" width="150" height="38" as="geometry" />
+        </mxCell>
+
+        <!-- Movie 1 Year + Rating -->
+        <mxCell id="m1-meta" value="2014 — 4.8/10" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=13;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="74" y="2574" width="110" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Movie 1 Hook -->
+        <mxCell id="m1-hook" value="Nuclear survivors trapped together as trust dissolves." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=15;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="74" y="2602" width="327" height="32" as="geometry" />
+        </mxCell>
+
+        <!-- Separator line -->
+        <mxCell id="sep1" value="" style="line;strokeWidth=1;strokeColor=#2E2F3A;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="74" y="2670" width="327" height="1" as="geometry" />
+        </mxCell>
+
+        <!-- Layout variant annotation -->
+        <mxCell id="m1-label" value="VARIANT A&#xa;Full-bleed poster" style="text;html=1;align=right;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=9;fontFamily=Inter;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="440" y="2200" width="110" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- ======== MOVIE 2: Variant B - Inset Left ======== -->
+
+        <!-- Movie 2 Poster (inset left) -->
+        <mxCell id="m2-poster" value="THE ROAD&#xa;(2009)&#xa;POSTER" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A2B36;strokeColor=none;fontColor=#555566;fontSize=10;fontFamily=Inter;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="74" y="2720" width="160" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- Movie 2 Title (right of poster) -->
+        <mxCell id="m2-title" value="The Road" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=24;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="2720" width="140" height="38" as="geometry" />
+        </mxCell>
+
+        <!-- Movie 2 Year -->
+        <mxCell id="m2-meta" value="2009 — 7.2/10" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=13;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="250" y="2758" width="110" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Movie 2 Hook -->
+        <mxCell id="m2-hook" value="Father and son&#xa;traverse a dead&#xa;world. Bleak,&#xa;beautiful,&#xa;devastating." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=15;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="250" y="2790" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Layout variant annotation -->
+        <mxCell id="m2-label" value="VARIANT B&#xa;Inset poster, text wraps right" style="text;html=1;align=right;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=9;fontFamily=Inter;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="440" y="2800" width="190" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- Separator line -->
+        <mxCell id="sep2" value="" style="line;strokeWidth=1;strokeColor=#2E2F3A;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="74" y="2996" width="327" height="1" as="geometry" />
+        </mxCell>
+
+        <!-- ======== MOVIE 3: Variant C - Landscape Crop ======== -->
+
+        <!-- Movie 3 Poster (landscape crop) -->
+        <mxCell id="m3-poster" value="THREADS (1984) — LANDSCAPE CROP 16:9" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A2B36;strokeColor=none;fontColor=#555566;fontSize=11;fontFamily=Inter;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="50" y="3044" width="375" height="211" as="geometry" />
+        </mxCell>
+
+        <!-- Movie 3 Title -->
+        <mxCell id="m3-title" value="Threads" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=24;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="74" y="3271" width="120" height="38" as="geometry" />
+        </mxCell>
+
+        <!-- Movie 3 Meta -->
+        <mxCell id="m3-meta" value="1984 — 8.0/10" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=13;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="74" y="3309" width="110" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Movie 3 Hook -->
+        <mxCell id="m3-hook" value="The most harrowing nuclear apocalypse ever filmed." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=15;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="74" y="3339" width="327" height="32" as="geometry" />
+        </mxCell>
+
+        <!-- Layout variant annotation -->
+        <mxCell id="m3-label" value="VARIANT C&#xa;Landscape crop (16:9)" style="text;html=1;align=right;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=9;fontFamily=Inter;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="440" y="3100" width="140" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- Separator line -->
+        <mxCell id="sep3" value="" style="line;strokeWidth=1;strokeColor=#2E2F3A;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="74" y="3407" width="327" height="1" as="geometry" />
+        </mxCell>
+
+        <!-- ======== MOVIE 4: Variant D - Text First ======== -->
+
+        <!-- Movie 4 Title (no poster shown) -->
+        <mxCell id="m4-title" value="Hidden" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=24;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="74" y="3456" width="100" height="38" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m4-meta" value="2015 — 6.4/10" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=13;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="74" y="3494" width="110" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m4-hook" value="Survivors hide from creatures above. Claustrophobic and tense." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=15;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="74" y="3524" width="327" height="32" as="geometry" />
+        </mxCell>
+
+        <!-- Tap hint for text-first variant -->
+        <mxCell id="m4-tap" value="tap to reveal poster →" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=11;fontFamily=Inter;fontStyle=2;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="74" y="3564" width="140" height="22" as="geometry" />
+        </mxCell>
+
+        <!-- Layout variant annotation -->
+        <mxCell id="m4-label" value="VARIANT D&#xa;Text-first, poster on tap" style="text;html=1;align=right;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=9;fontFamily=Inter;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="440" y="3480" width="160" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- Separator line -->
+        <mxCell id="sep4" value="" style="line;strokeWidth=1;strokeColor=#2E2F3A;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="74" y="3620" width="327" height="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- ZONE 4.5: TYPOGRAPHY BREAK                -->
+        <!-- ========================================== -->
+
+        <!-- Typography break background area -->
+        <mxCell id="z45-bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2029;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="50" y="3660" width="375" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- Category label -->
+        <mxCell id="z45-text" value="Bunker Films" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=26;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="137" y="3726" width="200" height="42" as="geometry" />
+        </mxCell>
+
+        <!-- Hand-drawn circle around "Bunker Films" -->
+        <mxCell id="z45-circle" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#D4523E;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="122" y="3714" width="230" height="64" as="geometry" />
+        </mxCell>
+
+        <!-- Subtitle -->
+        <mxCell id="z45-sub" value="Films about what happens when the door closes" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=13;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="97" y="3790" width="310" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Zone 4.5 annotation -->
+        <mxCell id="z45-label" value="ZONE 4.5: TYPOGRAPHY BREAK&#xa;Inserted every 4-5 movies.&#xa;Hand-drawn circle accent.&#xa;Breaks monotony of the browse." style="text;html=1;align=right;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=9;fontFamily=Inter;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="440" y="3700" width="210" height="64" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- EXPANDED STATE EXAMPLE                    -->
+        <!-- ========================================== -->
+
+        <!-- Show one movie in expanded state for reference -->
+        <mxCell id="exp-bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#272833;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="50" y="3920" width="375" height="420" as="geometry" />
+        </mxCell>
+
+        <mxCell id="exp-poster" value="EXPANDED STATE EXAMPLE&#xa;&#xa;THE ROAD (2009)&#xa;POSTER" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A2B36;strokeColor=none;fontColor=#555566;fontSize=10;fontFamily=Inter;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="50" y="3920" width="375" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Expanded description -->
+        <mxCell id="exp-desc" value="Full description text appears here when user&#xa;taps a movie entry. The panel slides open with&#xa;spring animation, pushing content below down." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=14;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="74" y="4016" width="327" height="64" as="geometry" />
+        </mxCell>
+
+        <!-- Letterboxd section -->
+        <mxCell id="exp-lb-label" value="Letterboxd takes" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=13;fontFamily=Inter;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="74" y="4092" width="120" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Positive review with red left border -->
+        <mxCell id="exp-review-border" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D4523E;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="74" y="4124" width="2" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="exp-review-pos" value="&quot;One of the best post-9/11 anxiety films.&#xa;The ending is devastating.&quot;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=14;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="92" y="4124" width="309" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Where to watch -->
+        <mxCell id="exp-watch-label" value="Watch on" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=13;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="74" y="4188" width="70" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="exp-watch-services" value="Tubi (free)  ·  Plex (free)  ·  Apple TV" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=14;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="74" y="4216" width="280" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Bookmark icon -->
+        <mxCell id="exp-bookmark" value="🔖" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="385" y="4016" width="36" height="32" as="geometry" />
+        </mxCell>
+
+        <!-- Expanded state annotation -->
+        <mxCell id="exp-label" value="EXPANDED STATE&#xa;Tap any movie to reveal this panel.&#xa;Slides open inline with spring anim.&#xa;Bookmark icon top-right.&#xa;Shows: description, Letterboxd,&#xa;streaming links." style="text;html=1;align=right;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=9;fontFamily=Inter;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="440" y="4000" width="190" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- ZONE 5: CATEGORIES (4400 - 4900px)        -->
+        <!-- ========================================== -->
+
+        <!-- Zone 5 background -->
+        <mxCell id="z5-bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2029;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="50" y="4440" width="375" height="500" as="geometry" />
+        </mxCell>
+
+        <!-- Section label -->
+        <mxCell id="z5-label-text" value="Browse by theme" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=13;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="74" y="4500" width="120" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Category: Post-Apocalyptic -->
+        <mxCell id="cat1-bracket-l" value="[" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=22;fontFamily=Inter;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="56" y="4548" width="26" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="cat1" value="Post-Apocalyptic" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=22;fontFamily=Inter;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="82" y="4548" width="210" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="cat1-bracket-r" value="]" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=22;fontFamily=Inter;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="4548" width="26" height="38" as="geometry" />
+        </mxCell>
+
+        <!-- Category: Survival -->
+        <mxCell id="cat2-bracket-l" value="[" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=22;fontFamily=Inter;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="56" y="4600" width="26" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="cat2" value="Survival" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=22;fontFamily=Inter;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="82" y="4600" width="110" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="cat2-bracket-r" value="]" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=22;fontFamily=Inter;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="192" y="4600" width="26" height="38" as="geometry" />
+        </mxCell>
+
+        <!-- Category: Psychological -->
+        <mxCell id="cat3-bracket-l" value="[" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=22;fontFamily=Inter;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="56" y="4652" width="26" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="cat3" value="Psychological" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=22;fontFamily=Inter;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="82" y="4652" width="170" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="cat3-bracket-r" value="]" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=22;fontFamily=Inter;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="252" y="4652" width="26" height="38" as="geometry" />
+        </mxCell>
+
+        <!-- Category: Bunker / Isolation -->
+        <mxCell id="cat4-bracket-l" value="[" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=22;fontFamily=Inter;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="56" y="4704" width="26" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="cat4" value="Bunker / Isolation" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=22;fontFamily=Inter;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="82" y="4704" width="220" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="cat4-bracket-r" value="]" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=22;fontFamily=Inter;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="300" y="4704" width="26" height="38" as="geometry" />
+        </mxCell>
+
+        <!-- Category: Societal Collapse -->
+        <mxCell id="cat5-bracket-l" value="[" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=22;fontFamily=Inter;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="56" y="4756" width="26" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="cat5" value="Societal Collapse" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=22;fontFamily=Inter;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="82" y="4756" width="210" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="cat5-bracket-r" value="]" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=22;fontFamily=Inter;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="4756" width="26" height="38" as="geometry" />
+        </mxCell>
+
+        <!-- Zone 5 annotation -->
+        <mxCell id="z5-label" value="ZONE 5: CATEGORIES&#xa;Large text links with hand-drawn brackets.&#xa;Tap to filter browse section above.&#xa;Smooth-scroll + re-render." style="text;html=1;align=right;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=9;fontFamily=Inter;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="440" y="4600" width="240" height="64" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- ZONE 6: FOOTER (4960 - 5100px)            -->
+        <!-- ========================================== -->
+
+        <!-- Footer background -->
+        <mxCell id="z6-bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2029;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="50" y="5000" width="375" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- Hand-drawn squiggle -->
+        <mxCell id="z6-squiggle" value="" style="endArrow=none;html=1;curved=1;strokeColor=#D4523E;strokeWidth=2;opacity=40;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="207" y="5060" as="sourcePoint" />
+            <mxPoint x="267" y="5060" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="217" y="5054" />
+              <mxPoint x="227" y="5066" />
+              <mxPoint x="237" y="5054" />
+              <mxPoint x="247" y="5066" />
+              <mxPoint x="257" y="5054" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Footer text -->
+        <mxCell id="z6-line1" value="Curated for Riamont" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=13;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="157" y="5084" width="160" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="z6-line2" value="Based on The Divide (2011)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=11;fontFamily=Inter;opacity=60;" vertex="1" parent="1">
+          <mxGeometry x="127" y="5118" width="220" height="22" as="geometry" />
+        </mxCell>
+
+        <!-- Zone 6 annotation -->
+        <mxCell id="z6-label" value="ZONE 6: FOOTER&#xa;Small, quiet, personal." style="text;html=1;align=right;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=9;fontFamily=Inter;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="440" y="5084" width="140" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- COLOR PALETTE REFERENCE (below mockup)    -->
+        <!-- ========================================== -->
+
+        <mxCell id="palette-title" value="COLOR PALETTE" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=14;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="5340" width="140" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Surface swatch -->
+        <mxCell id="sw1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1F2029;strokeColor=#3A3B47;arcSize=20;" vertex="1" parent="1">
+          <mxGeometry x="50" y="5380" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sw1-label" value="#1F2029&#xa;Surface" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=9;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="40" y="5424" width="70" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- Elevated swatch -->
+        <mxCell id="sw2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#272833;strokeColor=#3A3B47;arcSize=20;" vertex="1" parent="1">
+          <mxGeometry x="130" y="5380" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sw2-label" value="#272833&#xa;Elevated" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=9;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="120" y="5424" width="70" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- Primary text swatch -->
+        <mxCell id="sw3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F4F4;strokeColor=#3A3B47;arcSize=20;" vertex="1" parent="1">
+          <mxGeometry x="210" y="5380" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sw3-label" value="#F4F4F4&#xa;Primary" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=9;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="200" y="5424" width="70" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- Secondary text swatch -->
+        <mxCell id="sw4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9CA3AF;strokeColor=#3A3B47;arcSize=20;" vertex="1" parent="1">
+          <mxGeometry x="290" y="5380" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sw4-label" value="#9CA3AF&#xa;Secondary" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=9;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="278" y="5424" width="80" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- Accent swatch -->
+        <mxCell id="sw5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D4523E;strokeColor=#3A3B47;arcSize=20;" vertex="1" parent="1">
+          <mxGeometry x="370" y="5380" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sw5-label" value="#D4523E&#xa;Accent" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=9;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="360" y="5424" width="70" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- TYPOGRAPHY SCALE REFERENCE                -->
+        <!-- ========================================== -->
+
+        <mxCell id="type-title" value="TYPOGRAPHY SCALE (Inter)" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=14;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="5500" width="220" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="type-hero" value="Hero Title — 48px ExtraBold" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=36;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="5540" width="460" height="52" as="geometry" />
+        </mxCell>
+
+        <mxCell id="type-section" value="Section Heading — 36px Bold" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=28;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="5600" width="400" height="44" as="geometry" />
+        </mxCell>
+
+        <mxCell id="type-movie" value="Movie Title — 28px Bold" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=22;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="5652" width="290" height="36" as="geometry" />
+        </mxCell>
+
+        <mxCell id="type-category" value="Category Link — 24px SemiBold" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=20;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="50" y="5696" width="310" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="type-body" value="Body Text — 16px Regular. Used for descriptions and hooks." style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#F4F4F4;fontSize=15;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="50" y="5738" width="430" height="28" as="geometry" />
+        </mxCell>
+
+        <mxCell id="type-secondary" value="Secondary — 14px Regular. Year, rating, metadata." style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=13;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="50" y="5774" width="340" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="type-caption" value="Caption — 12px Regular. Footer, scroll prompt." style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#9CA3AF;fontSize=11;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="50" y="5806" width="280" height="22" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- ZONE LABELS (left side guide)             -->
+        <!-- ========================================== -->
+
+        <mxCell id="guide-z1" value="ZONE 1&#xa;HERO" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=10;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="330" width="56" height="36" as="geometry" />
+        </mxCell>
+
+        <mxCell id="guide-z2" value="ZONE 2&#xa;INTRO" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=10;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="870" width="56" height="36" as="geometry" />
+        </mxCell>
+
+        <mxCell id="guide-z3" value="ZONE 3&#xa;FEATURED" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=10;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="1400" width="66" height="36" as="geometry" />
+        </mxCell>
+
+        <mxCell id="guide-z4" value="ZONE 4&#xa;BROWSE" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=10;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="2800" width="56" height="36" as="geometry" />
+        </mxCell>
+
+        <mxCell id="guide-z45" value="ZONE 4.5&#xa;BREAK" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=10;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="-16" y="3740" width="62" height="36" as="geometry" />
+        </mxCell>
+
+        <mxCell id="guide-z5" value="ZONE 5&#xa;CATEGORIES" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=10;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="-26" y="4650" width="72" height="36" as="geometry" />
+        </mxCell>
+
+        <mxCell id="guide-z6" value="ZONE 6&#xa;FOOTER" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#D4523E;fontSize=10;fontFamily=Inter;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="5084" width="56" height="36" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
