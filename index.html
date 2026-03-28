@@ -58,17 +58,15 @@
     /* ── Tile ── */
     .tile{width:min(300px,82vw);aspect-ratio:2/3;border-radius:var(--radius-tile);overflow:hidden;position:relative;margin:0 auto;cursor:pointer;-webkit-tap-highlight-color:transparent;
       box-shadow:
-        0 1px 2px rgba(0,0,0,0.06),
-        0 4px 12px rgba(0,0,0,0.06),
-        0 16px 32px rgba(0,0,0,0.08),
-        0 28px 56px rgba(0,0,0,0.06);
+        0 4px 12px rgba(0,0,0,0.08),
+        0 16px 32px rgba(0,0,0,0.1),
+        0 28px 56px rgba(0,0,0,0.08);
       transition:transform 0.45s cubic-bezier(0.16,1,0.3,1),box-shadow 0.45s cubic-bezier(0.16,1,0.3,1)}
     .tile:hover{transform:translateY(-6px);
       box-shadow:
-        0 1px 2px rgba(0,0,0,0.06),
-        0 8px 16px rgba(0,0,0,0.08),
-        0 24px 48px rgba(0,0,0,0.1),
-        0 40px 72px rgba(0,0,0,0.08)}
+        0 8px 20px rgba(0,0,0,0.1),
+        0 24px 48px rgba(0,0,0,0.12),
+        0 40px 72px rgba(0,0,0,0.1)}
     .tile:active{transform:scale(0.97);transition-duration:0.15s}
 
     /* ── Glass Shine ── */
@@ -90,6 +88,9 @@
     .tile-title{font-family:var(--font-display);font-size:22px;font-weight:700;color:#FFF;line-height:1.12;letter-spacing:-0.5px;text-shadow:0 2px 12px rgba(0,0,0,0.5)}
     .tile-meta{font-family:var(--font-body);font-size:11px;color:rgba(255,255,255,0.6);margin-top:6px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase}
     .tile-meta .rating-star{color:rgba(255,255,255,0.75)}
+    .rating-good{color:#4CD964}
+    .rating-mid{color:#FFD60A}
+    .rating-bad{color:#FF453A}
 
     /* ── Reflection ── */
     .tile-reflection{width:min(300px,82vw);margin:0 auto;overflow:hidden;border-radius:0 0 var(--radius-tile) var(--radius-tile);transform:scaleY(-1);height:36px;mask-image:linear-gradient(to bottom,rgba(0,0,0,0.06),transparent);-webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,0.06),transparent);pointer-events:none;margin-top:-1px}
@@ -130,6 +131,9 @@
     .sheet-review.negative{border-left-color:#E0E0E0}
     .sheet-platforms{font-family:var(--font-body);font-weight:400;font-size:14px;color:var(--text);margin:0;line-height:1.6}
     .sheet-platform-free{color:var(--accent);font-weight:600}
+    .sheet-platform-link{text-decoration:none;transition:opacity 0.15s ease}
+    .sheet-platform-link:hover{opacity:0.7}
+    a.sheet-platform-link:not(.sheet-platform-free){color:var(--text);text-decoration:underline;text-underline-offset:2px;text-decoration-color:rgba(0,0,0,0.2)}
 
     /* ── Save Button — Pill w/ Blue Glow ── */
     .sheet-save-btn{width:100%;height:52px;border-radius:16px;background:var(--accent);color:#FFF;font-family:var(--font-body);font-weight:700;font-size:15px;border:none;cursor:pointer;-webkit-tap-highlight-color:transparent;letter-spacing:-0.2px;
@@ -162,13 +166,33 @@
     <div id="sheetContent"></div>
   </div>
   <script>
-    const TMDB_BASE='https://image.tmdb.org/t/p/w500';
+    const TMDB_BASE='https://image.tmdb.org/t/p/w342';
+    const PLATFORM_URLS={
+      'Tubi':'https://tubitv.com/search?q=',
+      'Plex':'https://watch.plex.tv/search?q=',
+      'Roku Channel':'https://therokuchannel.roku.com/search/',
+      'Pluto TV':'https://pluto.tv/search#',
+      'Kanopy':'https://www.kanopy.com/search?q=',
+      'Mubi':'https://mubi.com/en/films/search?q=',
+      'Shudder':'https://www.shudder.com/search?q=',
+      'Netflix':'https://www.netflix.com/search?q=',
+      'Hulu':'https://www.hulu.com/search?q=',
+      'HBO Max':'https://www.max.com/search?q=',
+      'Max':'https://www.max.com/search?q=',
+      'Peacock':'https://www.peacocktv.com/search?q=',
+      'Criterion Channel':'https://www.criterionchannel.com/search?q=',
+      'Apple TV':'https://tv.apple.com/search?term=',
+      'Amazon Video':'https://www.amazon.com/s?i=instant-video&k=',
+      'Fandango At Home':'https://www.vudu.com/content/browse/index/searchTerm/',
+      'Vudu':'https://www.vudu.com/content/browse/index/searchTerm/',
+    };
+    function ratingClass(r){var n=parseFloat(r);if(isNaN(n))return '';return n>=7?'rating-good':n>=5?'rating-mid':'rating-bad'}
     const FILTER_CATEGORIES=[{label:'All',value:'all'},{label:'Survival',value:'survival'},{label:'Bunker',value:'bunker'},{label:'Psychological',value:'psychological'},{label:'Post-Apocalyptic',value:'post-apocalyptic'},{label:'Group Dynamics',value:'group-dynamics'}];
     let allMovies=[];let activeFilter='all';
     function escapeAttr(s){return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;')}
     function renderChips(){var c=document.getElementById('chips');FILTER_CATEGORIES.forEach(function(cat){var b=document.createElement('button');b.className='chip'+(cat.value===activeFilter?' active':'');b.dataset.filter=cat.value;b.textContent=cat.label;b.addEventListener('click',function(){activeFilter=cat.value;c.querySelectorAll('.chip').forEach(function(x){x.classList.remove('active')});b.classList.add('active');filterTiles()});c.appendChild(b)})}
     function filterTiles(){document.querySelectorAll('.tile-wrapper').forEach(function(w){var cats=JSON.parse(w.dataset.categories||'[]');var show=activeFilter==='all'||cats.indexOf(activeFilter)!==-1;if(show){w.classList.remove('hidden');requestAnimationFrame(function(){observer.observe(w)})}else{w.classList.add('hidden');w.classList.remove('visible')}})}
-    function renderTiles(movies){var c=document.getElementById('tiles');while(c.firstChild)c.removeChild(c.firstChild);movies.forEach(function(movie,i){var url=TMDB_BASE+movie.posterPath;var w=document.createElement('div');w.className='tile-wrapper';w.dataset.categories=JSON.stringify(movie.categories||[]);w.dataset.title=movie.title;w.style.transitionDelay=Math.min(i*0.07,0.5)+'s';var t=document.createElement('div');t.className='tile';t.dataset.title=escapeAttr(movie.title);var img=document.createElement('img');img.src=url;img.alt=movie.title;img.loading=i<3?'eager':'lazy';img.decoding='async';t.appendChild(img);var border=document.createElement('div');border.className='tile-border';t.appendChild(border);var info=document.createElement('div');info.className='tile-info';var tt=document.createElement('div');tt.className='tile-title';tt.textContent=movie.title;info.appendChild(tt);var m=document.createElement('div');m.className='tile-meta';m.textContent=movie.year+' \u00B7 ';var star=document.createElement('span');star.className='rating-star';star.textContent='\u2605';m.appendChild(star);m.appendChild(document.createTextNode(' '+movie.rating));info.appendChild(m);t.appendChild(info);t.addEventListener('click',function(){document.dispatchEvent(new CustomEvent('open-detail',{detail:movie}))});w.appendChild(t);var r=document.createElement('div');r.className='tile-reflection';r.setAttribute('aria-hidden','true');var ri=document.createElement('img');ri.src=url;ri.alt='';ri.loading='lazy';ri.decoding='async';r.appendChild(ri);w.appendChild(r);c.appendChild(w)});document.querySelectorAll('.tile-wrapper').forEach(function(x){observer.observe(x)})}
+    function renderTiles(movies){var c=document.getElementById('tiles');while(c.firstChild)c.removeChild(c.firstChild);movies.forEach(function(movie,i){var url=TMDB_BASE+movie.posterPath;var w=document.createElement('div');w.className='tile-wrapper';w.dataset.categories=JSON.stringify(movie.categories||[]);w.dataset.title=movie.title;w.style.transitionDelay=Math.min(i*0.07,0.5)+'s';var t=document.createElement('div');t.className='tile';t.dataset.title=escapeAttr(movie.title);var img=document.createElement('img');img.src=url;img.alt=movie.title;img.loading=i<3?'eager':'lazy';img.decoding='async';t.appendChild(img);var border=document.createElement('div');border.className='tile-border';t.appendChild(border);var info=document.createElement('div');info.className='tile-info';var tt=document.createElement('div');tt.className='tile-title';tt.textContent=movie.title;info.appendChild(tt);var m=document.createElement('div');m.className='tile-meta';m.textContent=movie.year+' \u00B7 ';var ratingWrap=document.createElement('span');ratingWrap.className=ratingClass(movie.rating);var star=document.createElement('span');star.className='rating-star';star.textContent='\u2605';ratingWrap.appendChild(star);ratingWrap.appendChild(document.createTextNode(' '+movie.rating));m.appendChild(ratingWrap);info.appendChild(m);t.appendChild(info);t.addEventListener('click',function(){document.dispatchEvent(new CustomEvent('open-detail',{detail:movie}))});w.appendChild(t);var r=document.createElement('div');r.className='tile-reflection';r.setAttribute('aria-hidden','true');var ri=document.createElement('img');ri.src=url;ri.alt='';ri.loading='lazy';ri.decoding='async';r.appendChild(ri);w.appendChild(r);c.appendChild(w)});document.querySelectorAll('.tile-wrapper').forEach(function(x){observer.observe(x)})}
     var observer={observe:function(){},unobserve:function(){}};
     async function init(){renderChips();try{var r=await fetch('data/movies.json');if(!r.ok)throw new Error('HTTP '+r.status);allMovies=await r.json();renderTiles(allMovies);if(window._gsapReady)window._gsapReady()}catch(err){console.error('Failed to load movies:',err);var c=document.getElementById('tiles');while(c.firstChild)c.removeChild(c.firstChild);var d=document.createElement('div');d.className='loading';d.style.flexDirection='column';d.style.gap='8px';var s=document.createElement('span');s.textContent='Could not load movies';d.appendChild(s);var e=document.createElement('span');e.style.fontSize='13px';e.style.opacity='0.6';e.textContent=err.message;d.appendChild(e);c.appendChild(d)}}
     init();
@@ -220,16 +244,22 @@
       var whereToWatch=movie.whereToWatch||{};
       var saved=localStorage.getItem('movie-rec-saved-'+title)==='true';
       while(contentEl.firstChild)contentEl.removeChild(contentEl.firstChild);
-      if(posterPath){var img=document.createElement('img');img.className='sheet-poster';img.src='https://image.tmdb.org/t/p/w500'+posterPath;img.alt=title+' poster';contentEl.appendChild(img)}
+      if(posterPath){var img=document.createElement('img');img.className='sheet-poster';img.src='https://image.tmdb.org/t/p/w342'+posterPath;img.alt=title+' poster';contentEl.appendChild(img)}
       contentEl.appendChild(el('h2','sheet-title',title));
-      var metaParts=[];if(year)metaParts.push(String(year));if(director)metaParts.push(director);if(rating)metaParts.push(rating+'/10');
-      if(metaParts.length>0)contentEl.appendChild(el('p','sheet-meta',metaParts.join(' \u00B7 ')));
+      var metaParts=[];if(year)metaParts.push(String(year));if(director)metaParts.push(director);
+      var metaEl=el('p','sheet-meta');if(metaParts.length>0){metaEl.textContent=metaParts.join(' \u00B7 ')}
+      if(rating){var rspan=el('span',ratingClass(rating),' \u00B7 \u2605 '+rating+'/10');metaEl.appendChild(rspan)}
+      contentEl.appendChild(metaEl);
       if(genres.length>0){var gr=el('div','sheet-genres');for(var i=0;i<genres.length;i++)gr.appendChild(el('span','sheet-genre-pill',genres[i]));contentEl.appendChild(gr)}
       contentEl.appendChild(el('div','sheet-clear'));
       if(description)contentEl.appendChild(el('p','sheet-description',description));
       if(positiveReview||negativeReview){contentEl.appendChild(spacer(24));contentEl.appendChild(el('p','sheet-section-label','What people said'));if(positiveReview)contentEl.appendChild(el('p','sheet-review','\u201C'+positiveReview+'\u201D'));if(positiveReview&&negativeReview)contentEl.appendChild(spacer(10));if(negativeReview)contentEl.appendChild(el('p','sheet-review negative','\u201C'+negativeReview+'\u201D'))}
       var fp=whereToWatch.free||[],sp=whereToWatch.svod||[],vp=whereToWatch.vod||[];
-      if(fp.length>0||sp.length>0||vp.length>0){contentEl.appendChild(spacer(24));contentEl.appendChild(el('p','sheet-section-label','Where to watch'));var pp=el('p','sheet-platforms');var segs=[];for(var i=0;i<fp.length;i++){var n=platformName(fp[i]);if(n)segs.push(el('span','sheet-platform-free',n+' (free)'))}for(var i=0;i<sp.length;i++){var n=platformName(sp[i]);if(n)segs.push(document.createTextNode(n))}for(var i=0;i<vp.length;i++){var n=platformName(vp[i]);if(n)segs.push(document.createTextNode(n))}for(var i=0;i<segs.length;i++){pp.appendChild(segs[i]);if(i<segs.length-1)pp.appendChild(document.createTextNode(', '))}contentEl.appendChild(pp)}
+      function makePlatformLink(name,isFree){var n=name;var url=PLATFORM_URLS[n]?(PLATFORM_URLS[n]+encodeURIComponent(title)):null;var a=document.createElement(url?'a':'span');a.className='sheet-platform-link'+(isFree?' sheet-platform-free':'');if(url){a.href=url;a.target='_blank';a.rel='noopener noreferrer'}a.textContent=n+(isFree?' (free)':'');return a}
+      var allPlatforms=[].concat(fp.map(function(x){return{name:platformName(x),free:true}}),sp.map(function(x){return{name:platformName(x),free:false}}),vp.map(function(x){return{name:platformName(x),free:false}}));
+      allPlatforms.push({name:'Dopebox',free:true,url:'https://dopebox.to'});
+      contentEl.appendChild(spacer(24));contentEl.appendChild(el('p','sheet-section-label','Where to watch'));var pp=el('p','sheet-platforms');
+      allPlatforms.forEach(function(p,i){if(!p.name)return;var a;if(p.url){a=document.createElement('a');a.className='sheet-platform-link sheet-platform-free';a.href=p.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=p.name+' (free)'}else{a=makePlatformLink(p.name,p.free)}pp.appendChild(a);if(i<allPlatforms.length-1)pp.appendChild(document.createTextNode(', '))});contentEl.appendChild(pp)
       contentEl.appendChild(spacer(32));
       var saveBtn=el('button','sheet-save-btn'+(saved?' saved':''),saved?'Saved':'Save for Later');saveBtn.id='sheetSaveBtn';saveBtn.addEventListener('click',function(){toggleSave(title)});contentEl.appendChild(saveBtn);
       contentEl.appendChild(spacer(12));
