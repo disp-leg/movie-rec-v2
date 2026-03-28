@@ -16,6 +16,13 @@ node_modules/
 /out/
 .netlify/
 
+# static export artifacts (if generated at root)
+/_next/
+/index.html
+/index.txt
+/404.html
+/.nojekyll
+
 # production
 /build
 
