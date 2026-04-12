@@ -118,8 +118,10 @@ export default function BrowseRows({ movies, onSelect }: BrowseRowsProps) {
   return (
     <div>
       {ROWS.map((row) => {
-        const filtered = movies.filter((m) =>
-          m.categories.some((c) => c.toLowerCase() === row.filter.toLowerCase())
+        const filtered = movies.filter(
+          (m) =>
+            !m.watchedByRia &&
+            m.categories.some((c) => c.toLowerCase() === row.filter.toLowerCase())
         );
         if (filtered.length === 0) return null;
 

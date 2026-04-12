@@ -5,6 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import BrowseRows from "@/components/BrowseRows";
 import TabBar from "@/components/TabBar";
 import DetailOverlay from "@/components/DetailOverlay";
+import WatchedLedger from "@/components/WatchedLedger";
 import { movies } from "@/lib/movies";
 import { useBehavior } from "@/hooks/useBehavior";
 import { Movie } from "@/lib/types";
@@ -18,6 +19,13 @@ export default function Home() {
     <div style={{ background: "#000", minHeight: "100vh", paddingBottom: 80 }}>
       <HeroSection onSelect={setSelectedMovie} />
       <BrowseRows
+        movies={movies}
+        onSelect={(movie) => {
+          setSelectedMovie(movie);
+          recordExpand(movie.title);
+        }}
+      />
+      <WatchedLedger
         movies={movies}
         onSelect={(movie) => {
           setSelectedMovie(movie);
