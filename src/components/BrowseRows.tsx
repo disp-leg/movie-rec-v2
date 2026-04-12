@@ -3,6 +3,7 @@
 import { Movie } from "@/lib/types";
 import { getPosterUrl } from "@/lib/posters";
 import { getTitleColor } from "@/lib/poster";
+import FreshStrip from "@/components/FreshStrip";
 
 interface BrowseRowsProps {
   movies: Movie[];
@@ -117,6 +118,7 @@ function PosterCard({ movie, onSelect }: { movie: Movie; onSelect: (m: Movie) =>
 export default function BrowseRows({ movies, onSelect }: BrowseRowsProps) {
   return (
     <div>
+      <FreshStrip movies={movies} onSelect={onSelect} />
       {ROWS.map((row) => {
         const filtered = movies.filter(
           (m) =>
