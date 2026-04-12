@@ -4,9 +4,11 @@ import { Movie } from "@/lib/types";
 import { getPosterUrl } from "@/lib/posters";
 import { getTitleColor } from "@/lib/poster";
 import FreshStrip from "@/components/FreshStrip";
+import { DialState } from "@/lib/engine-types";
 
 interface BrowseRowsProps {
   movies: Movie[];
+  dials?: DialState;
   onSelect: (movie: Movie) => void;
 }
 
@@ -115,7 +117,19 @@ function PosterCard({ movie, onSelect }: { movie: Movie; onSelect: (m: Movie) =>
   );
 }
 
-export default function BrowseRows({ movies, onSelect }: BrowseRowsProps) {
+function passesDialFilter(m: Movie, dials?: DialState): boolean {
+  if (!dials) return true;
+  if (dials.scary > 1 && m.scary != null && m.scary < dials.scary) return false;
+  if (dials.extreme < 10 && m.extreme != null && m.extreme > dials.extreme) return false;
+  if (dials.pace > 0) {
+    const paceMap: Record<string, number> = { slow: 1, medium: 2, fast: 3 };
+    const moviePace = m.pace ? paceMap[m.pace] || 0 : 0;
+    if (moviePace > 0 && moviePace !== dials.pace) return false;
+  }
+  return true;
+}
+
+export default function BrowseRows({ movies, dials, onSelect }: BrowseRowsProps) {
   return (
     <div>
       <FreshStrip movies={movies} onSelect={onSelect} />
@@ -123,6 +137,7 @@ export default function BrowseRows({ movies, onSelect }: BrowseRowsProps) {
         const filtered = movies.filter(
           (m) =>
             !m.watchedByRia &&
+            passesDialFilter(m, dials) &&
             m.categories.some((c) => c.toLowerCase() === row.filter.toLowerCase())
         );
         if (filtered.length === 0) return null;

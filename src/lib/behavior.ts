@@ -197,7 +197,8 @@ export function toggleSignal(
  */
 export function rankMovies(
   movies: Movie[],
-  state: BehaviorState
+  state: BehaviorState,
+  dials?: { scary: number; extreme: number; pace: number }
 ): RankedMovie[] {
   // Collect DNA tags from all saved movies for similarity boost
   const savedDnaTags = new Set<string>();
@@ -220,6 +221,17 @@ export function rankMovies(
 
     // Filter out seen movies entirely
     if (isSeen) continue;
+
+    // Dial filtering
+    if (dials) {
+      if (dials.scary > 1 && movie.scary != null && movie.scary < dials.scary) continue;
+      if (dials.extreme < 10 && movie.extreme != null && movie.extreme > dials.extreme) continue;
+      if (dials.pace > 0) {
+        const paceMap: Record<string, number> = { slow: 1, medium: 2, fast: 3 };
+        const moviePace = movie.pace ? paceMap[movie.pace] || 0 : 0;
+        if (moviePace > 0 && moviePace !== dials.pace) continue;
+      }
+    }
 
     // Calculate score
     let score = 100;
