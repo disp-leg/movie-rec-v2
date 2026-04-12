@@ -14,7 +14,7 @@ import { DialState, DEFAULT_DIALS } from "@/lib/engine-types";
 import { loadDials, saveDials } from "@/lib/dials";
 
 export default function Home() {
-  const { rankedMovies, save, skip, markSeen, recordExpand } = useBehavior(movies);
+  const { rankedMovies, save, markSeen, recordExpand } = useBehavior(movies);
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
   const [activeTab, setActiveTab] = useState<string>("home");
   const [dials, setDials] = useState<DialState>(DEFAULT_DIALS);

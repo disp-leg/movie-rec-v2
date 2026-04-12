@@ -12,18 +12,24 @@ interface HeroSectionProps {
 const FEATURED_COUNT = 5;
 
 export default function HeroSection({ onSelect }: HeroSectionProps) {
-  const featured = movies.filter((m) => getPosterUrl(m.title)).slice(0, FEATURED_COUNT);
+  // Prefer movies with posters, fall back to first N movies
+  const withPosters = movies.filter((m) => getPosterUrl(m.title));
+  const featured = (withPosters.length > 0 ? withPosters : movies).slice(0, FEATURED_COUNT);
   const [activeIndex, setActiveIndex] = useState(0);
-  const movie = featured[activeIndex];
-  const posterUrl = getPosterUrl(movie.title);
 
   // Auto-cycle every 6 seconds
   useEffect(() => {
+    if (featured.length === 0) return;
     const timer = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % featured.length);
     }, 6000);
     return () => clearInterval(timer);
   }, [featured.length]);
+
+  if (featured.length === 0) return null;
+
+  const movie = featured[activeIndex % featured.length];
+  const posterUrl = getPosterUrl(movie.title);
 
   return (
     <div
