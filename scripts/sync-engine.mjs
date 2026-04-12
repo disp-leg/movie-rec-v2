@@ -164,6 +164,62 @@ function deduplicate(movies) {
   return Array.from(seen.values());
 }
 
+// --- Convert engine entries to Movie shape ---
+function engineToMovies(engineEntries, existingKeys) {
+  const buildDate = new Date().toISOString().split("T")[0];
+  const newMovies = [];
+
+  for (const eng of engineEntries) {
+    const key = makeKey(eng.title, eng.year);
+    if (existingKeys.has(key)) continue; // already in app
+
+    // Derive categories from sub_genre and scare_type
+    const cats = [];
+    const sg = (eng.sub_genre || "").toLowerCase();
+    if (sg.includes("found footage")) cats.push("confined");
+    if (sg.includes("possession") || sg.includes("haunted")) cats.push("psychological");
+    if (sg.includes("survival")) cats.push("survival");
+    if (sg.includes("isolation") || sg.includes("bunker")) cats.push("bunker");
+    if (sg.includes("apocal")) cats.push("post-apocalyptic");
+    if (cats.length === 0) cats.push("psychological"); // default bucket
+
+    newMovies.push({
+      title: eng.title,
+      year: eng.year,
+      director: eng.director,
+      rating: eng.composite_scare_weighted ?? eng.composite_current ?? 5.0,
+      genres: [eng.sub_genre || "Horror"],
+      categories: cats,
+      dna: [eng.scare_type || "horror", eng.sub_genre || ""].filter(Boolean),
+      description: eng.synopsis || "",
+      letterboxd: { top_positive: "", top_negative: "" },
+      whereToWatch: {
+        svod: eng.streaming ? [eng.streaming] : [],
+        vod: [],
+        free: [],
+      },
+      sources: [],
+      tmdbId: null,
+      scary: eng.scary,
+      production: eng.production,
+      extreme: eng.extreme,
+      paceScore: eng.pace_score,
+      pace: eng.pace,
+      whyScary: eng.why_scary,
+      scareType: eng.scare_type,
+      subGenre: eng.sub_genre,
+      wave: eng.wave,
+      addedDate: buildDate,
+      compositeScore: eng.composite_scare_weighted ?? eng.composite_current,
+      defaultVisible: eng.default_visible,
+      csvStatus: eng.csv_status,
+    });
+  }
+
+  console.log(`${newMovies.length} new movies from engine (not in existing batches)`);
+  return newMovies;
+}
+
 // --- Main ---
 function main() {
   const watchedSet = loadWatchedSet();
@@ -175,7 +231,12 @@ function main() {
   let allMovies = deduplicate([...batchMovies, ...seedMovies]);
   console.log(`${allMovies.length} unique movies after dedup`);
 
-  // Enrich with engine data + watched flags
+  // Add engine-only entries as new movies
+  const existingKeys = new Set(allMovies.map((m) => makeKey(m.title, m.year)));
+  const engineMovies = engineToMovies(engineEntries, existingKeys);
+  allMovies = [...allMovies, ...engineMovies];
+
+  // Enrich ALL movies with engine data + watched flags
   allMovies = enrichWithEngine(allMovies, engineEntries, watchedSet);
 
   // Filter out default_visible=false from engine (subtitle-only)
