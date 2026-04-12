@@ -1,7 +1,7 @@
-import moviesData from "../../data/movies.json";
+import moviesData from "../data/engine-movies.json";
 import { Movie } from "./types";
 
-export const movies: Movie[] = moviesData as Movie[];
+export const movies: Movie[] = moviesData as unknown as Movie[];
 
 export function getMoviesByCategory(category: string): Movie[] {
   return movies.filter((movie) =>
