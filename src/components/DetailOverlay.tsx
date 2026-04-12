@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Movie } from "@/lib/types";
 import { getPosterUrl } from "@/lib/posters";
 import { getTitleColor } from "@/lib/poster";
+import ScareDetail from "@/components/ScareDetail";
 
 interface DetailOverlayProps {
   movie: Movie;
@@ -198,6 +199,9 @@ export default function DetailOverlay({
         >
           {movie.description}
         </p>
+
+        {/* Scare detail (engine data) */}
+        <ScareDetail movie={movie} />
 
         {/* Reviews */}
         <div style={{ marginTop: 24 }}>
