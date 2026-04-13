@@ -3,7 +3,10 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
+    "sync": "node scripts/sync-engine.mjs",
+    "predev": "node scripts/sync-engine.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/sync-engine.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -23,6 +26,7 @@
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "csv-parse": "^6.2.1",
     "drizzle-kit": "^0.30.0",
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.2.0",

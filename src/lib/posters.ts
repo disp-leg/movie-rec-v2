@@ -1,4 +1,4 @@
-import moviesData from "../../data/movies.json";
+import moviesData from "../data/engine-movies.json";
 
 // Map of movie title -> full poster URL
 export const POSTER_URLS: Record<string, string> = {};

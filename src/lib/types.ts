@@ -22,6 +22,22 @@ export interface Movie {
   whereToWatch: WhereToWatch;
   sources: string[];
   tmdbId: string | null;
+  // Engine fields (populated by sync-engine)
+  scary?: number;
+  production?: number;
+  extreme?: number;
+  paceScore?: number;
+  pace?: "fast" | "medium" | "slow";
+  whyScary?: string;
+  scareType?: string;
+  subGenre?: string;
+  wave?: string;
+  addedDate?: string;
+  watchedByRia?: boolean;
+  csvStatus?: "ELIGIBLE" | "WATCHED" | "REVIEWED";
+  compositeScore?: number;
+  defaultVisible?: boolean;
+  posterPath?: string;
 }
 
 export type Category = string;
